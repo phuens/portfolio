@@ -21,11 +21,15 @@ export default function About() {
                 </div>
 
                 <div className="my-4">
-                    A 22 year old software developer from Bhutan with a passion to create products
-                    that impact. I'm currently interested in Web3 and meditation. For me programming
-                    is a means not an end for creating. I love to talk about various topics other
-                    than technology, currently about the meaning of life and exploring what it means
-                    to "make it".
+                    Phuntsho is a software developer from Bhutan with a passion to leverage and make
+                    technology serve communities. He is currently a master's student with a focus on
+                    computer vision at the{' '}
+                    <a href="https://www.usask.ca/" target="_" className="text-blue-500">
+                        University of Saskatchewan.
+                    </a>{' '}
+                    Other than coding, Phuntsho can be seen playing soccer, squash or any sport he
+                    can find people to play with. However, you will never find him refering to
+                    himself in third person other than here.
                 </div>
             </div>
 
@@ -37,7 +41,7 @@ export default function About() {
                         </a>
                     );
                 })}
-                <a className="underline text-gray-400" href="phuntsho.com" target="_">
+                <a className="underline text-gray-400" href="../asset/resume.pdf" target="_">
                     resume
                 </a>
             </div>
