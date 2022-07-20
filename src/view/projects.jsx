@@ -25,6 +25,7 @@ export default function Projects() {
                         {item.stickers} :
                         {item.stacks.map((stack, index) => (
                             <span
+                                key={item.position + stack.name}
                                 className={style.sticker}
                                 style={{ backgroundColor: stack.color }}
                             >

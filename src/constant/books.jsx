@@ -55,7 +55,7 @@ export const LATEST = [
         image: TWOWAYS,
     },
     {
-        title: 'Chatter',
+        title: 'Chattersad',
         author: 'hello',
         date: '2021-09-12 - 2021-09-21',
         rating: 5,
@@ -63,7 +63,7 @@ export const LATEST = [
         image: CHATTER,
     },
     {
-        title: 'psychology of money',
+        title: 'psycasdasdhology of money',
         author: 'jimbp',
         date: '2021-09-12 - 2021-09-21',
         rating: 5,
@@ -71,7 +71,7 @@ export const LATEST = [
         image: PM,
     },
     {
-        title: 'almanack of naval',
+        title: 'almsadasanack of naval',
         author: 'pam',
         date: '2021-09-12 - 2021-09-21',
         rating: 4,
@@ -79,7 +79,7 @@ export const LATEST = [
         image: NAVAL,
     },
     {
-        title: 'book of two ways',
+        title: 'book adasdof two ways',
         author: 'hunkle',
         date: '2021-09-12 - 2021-09-21',
         rating: 5,

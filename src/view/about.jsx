@@ -37,7 +37,7 @@ export default function About() {
                         </a>
                     );
                 })}
-                <a className="underline text-gray-400" href="#" target="_">
+                <a className="underline text-gray-400" href="phuntsho.com" target="_">
                     resume
                 </a>
             </div>

@@ -35,7 +35,7 @@ const Card = () => {
                         >
                             <div className="flex mt-4 mx-2  ">
                                 {Array.from({ length: book.rating }, (_, i) => (
-                                    <span className="text-xl text-yellow-500" key={book.title + i}>
+                                    <span className="text-xl text-yellow-500" key={book.author + i}>
                                         <HiStar />
                                     </span>
                                 ))}
@@ -44,7 +44,7 @@ const Card = () => {
                             <div className="flex flex-wrap mt-2 ml-2 text-gray-700 ">
                                 {book.genre.map((item) => (
                                     <span
-                                        key={book.title + item}
+                                        key={book.title + CATEGORY_COLORS[item]}
                                         className="px-2 text-xs rounded-xl text-white  mx-1"
                                         style={{ backgroundColor: CATEGORY_COLORS[item] }}
                                     >
@@ -104,7 +104,7 @@ function Row(props) {
                                         <TableCell className="text-center">
                                             {row.genre.map((item) => (
                                                 <span
-                                                    key={row.title + item}
+                                                    key={row.title + row.author + item}
                                                     className="my-1 px-1 justify-center text-sm rounded-xl flex flex-wrap border border-white-200 text-white"
                                                 >
                                                     {item}
@@ -129,7 +129,7 @@ const MobileCard = () => {
             <Table aria-label="collapsible table">
                 <TableBody className="flex">
                     {LATEST.map((row) => (
-                        <Row row={row} key={row.title} />
+                        <Row row={row} key={row.title + row.author + row.date} />
                     ))}
                 </TableBody>
             </Table>

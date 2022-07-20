@@ -47,8 +47,13 @@ export default function Jobs() {
             {/* <hr /> */}
             <div className="flex my-4">
                 {ABOUT.map((item, index) => (
-                    <div className="w-4/12">
-                        <Layout info={item} index={index} image={images[index]} key={item.year} />
+                    <div className="w-4/12" key={item.position}>
+                        <Layout
+                            info={item}
+                            index={index}
+                            image={images[index]}
+                            key={item.position + item.year}
+                        />
                     </div>
                 ))}
             </div>
