@@ -2,6 +2,7 @@ import React from 'react';
 import Hedshot from '../asset/images/about/headshot.png';
 import { SOCIAL_MEDIA } from '../constant/constants';
 import Jobs from '../component/jobPositions';
+import { AiOutlineMail } from 'react-icons/ai';
 
 export default function About() {
     const style = {
@@ -20,7 +21,7 @@ export default function About() {
                     </span>
                 </div>
 
-                <div className="my-4">
+                <div className="my-4 ">
                     Phuntsho is a software developer from Bhutan with a passion to leverage and make
                     technology serve communities. He is currently a master's student with a focus on
                     computer vision at the{' '}
@@ -29,7 +30,8 @@ export default function About() {
                     </a>{' '}
                     Other than coding, Phuntsho can be seen playing soccer, squash, or any sport he
                     can find people to play with. However, you will never find him referring to
-                    himself in the third person other than here.
+                    himself in the third person other than here. you can reach phuntsho at
+                    <span className="text-blue-400 "> c.phuntshonorbu@gmail.com.</span>
                 </div>
             </div>
 
