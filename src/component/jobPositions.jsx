@@ -8,7 +8,7 @@ const style = {
     year: 'text-xs ',
     position: 'text-gray-400 font-bold',
     description: 'mt-2 text-gray-700',
-    company: 'underline my-2 text-sm',
+    company: 'underline my-2 text-sm hover:text-blue-400 transition-all duration-200 ease-in',
     country: 'text-xs text-gray-700',
 };
 
@@ -16,7 +16,7 @@ const Layout = ({ info, image, index }) => {
     let container = '';
     index % 2 === 1
         ? (container = 'w-full text-center border-l border-r')
-        : (container = 'w-full text-center ');
+        : (container = 'w-full text-center hover:text-white-200');
     return (
         <div className={container}>
             <p className={style.year} style={{ color: '#a0a6ba' }}>

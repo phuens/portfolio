@@ -27,9 +27,9 @@ export default function About() {
                     <a href="https://www.usask.ca/" target="_" className="text-blue-500">
                         University of Saskatchewan.
                     </a>{' '}
-                    Other than coding, Phuntsho can be seen playing soccer, squash or any sport he
-                    can find people to play with. However, you will never find him refering to
-                    himself in third person other than here.
+                    Other than coding, Phuntsho can be seen playing soccer, squash, or any sport he
+                    can find people to play with. However, you will never find him referring to
+                    himself in the third person other than here.
                 </div>
             </div>
 
@@ -42,7 +42,7 @@ export default function About() {
                     );
                 })}
                 <a
-                    className="underline text-blue-400"
+                    className="underline text-blue-400 hover:text-blue-300 transition-all duration-200 ease-in"
                     href="https://phuens.github.io/portfolio/resume.pdf"
                     target="_"
                 >
