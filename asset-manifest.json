@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.b66202b9.css",
+    "main.js": "/portfolio/static/js/main.b5beb6ce.js",
+    "static/js/787.5809834d.chunk.js": "/portfolio/static/js/787.5809834d.chunk.js",
+    "static/media/two_ways.jpeg": "/portfolio/static/media/two_ways.93c6058b45fa40a7dc12.jpeg",
+    "static/media/headshot.png": "/portfolio/static/media/headshot.1643e400f1d4c40d0adb.png",
+    "static/media/psychology_of_money.jpeg": "/portfolio/static/media/psychology_of_money.be02e87085f639007789.jpeg",
+    "static/media/ttpl.png": "/portfolio/static/media/ttpl.2f83e7c9fb57e8e18d91.png",
+    "static/media/chatter.jpeg": "/portfolio/static/media/chatter.396d7f86d2bc82cf7b1d.jpeg",
+    "static/media/wheaton.jpg": "/portfolio/static/media/wheaton.a288a7dd537924f71ee3.jpg",
+    "static/media/misc.jpg": "/portfolio/static/media/misc.27365ab63697dfebe505.jpg",
+    "static/media/watson.png": "/portfolio/static/media/watson.e7f62affee234aa3fc5c.png",
+    "static/media/nepal.jpg": "/portfolio/static/media/nepal.659987f0944d162471fd.jpg",
+    "static/media/usask.png": "/portfolio/static/media/usask.c80d6976213e2d0e62e7.png",
+    "static/media/mauritius.jpg": "/portfolio/static/media/mauritius.c5768220435bda9284f9.jpg",
+    "static/media/rwanda.jpg": "/portfolio/static/media/rwanda.79357b448ca43259d5c9.jpg",
+    "static/media/bhutan.jpg": "/portfolio/static/media/bhutan.f2b9ea42521f9d9925cf.jpg",
+    "static/media/mongolia.jpg": "/portfolio/static/media/mongolia.16c004a0690bf9069c5a.jpg",
+    "static/media/kenya.jpg": "/portfolio/static/media/kenya.0ccc8a9d04e2716f23f9.jpg",
+    "static/media/zanzibar.jpg": "/portfolio/static/media/zanzibar.2ef3e5155b288918292d.jpg",
+    "static/media/tanzania.jpg": "/portfolio/static/media/tanzania.69f040cda2162066f9aa.jpg",
+    "index.html": "/portfolio/index.html",
+    "main.b66202b9.css.map": "/portfolio/static/css/main.b66202b9.css.map",
+    "main.b5beb6ce.js.map": "/portfolio/static/js/main.b5beb6ce.js.map",
+    "787.5809834d.chunk.js.map": "/portfolio/static/js/787.5809834d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b66202b9.css",
+    "static/js/main.b5beb6ce.js"
+  ]
+}
