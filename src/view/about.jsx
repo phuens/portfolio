@@ -2,7 +2,6 @@ import React from 'react';
 import Hedshot from '../asset/images/about/headshot.png';
 import { SOCIAL_MEDIA } from '../constant/constants';
 import Jobs from '../component/jobPositions';
-import { AiOutlineMail } from 'react-icons/ai';
 
 export default function About() {
     const style = {
