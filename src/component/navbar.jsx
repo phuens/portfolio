@@ -12,7 +12,7 @@ export default function Navbar({ tabChange }) {
                 <button
                     onClick={() => tabChange(item.text)}
                     key={item.text}
-                    className="mx-6 text-centers"
+                    className="mx-6 text-centers hover:font-bold"
                     value={item.text}
                 >
                     <Emoji icon={item.icon} size="10" text={item.text} />

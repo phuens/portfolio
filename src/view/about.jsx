@@ -6,8 +6,8 @@ import Jobs from '../component/jobPositions';
 export default function About() {
     const style = {
         headshotContainer:
-            'flex flex-row items-center justify-around text-2xl sm:text-2xl md:text-3xl mt-3 mb-6',
-        headshot: ' items-center rounded-full w-2/12 sm:w-full md:w-2/12',
+            'flex flex-row items-center justify-around text-2xl md:text-3xl mt-3 mb-6',
+        headshot: ' items-center rounded-full w-2/12  md:w-2/12',
         socialMedia: 'text-2xl pr-8 text-gray-400',
     };
     return (
@@ -20,7 +20,7 @@ export default function About() {
                     </span>
                 </div>
 
-                <div className=" my-4">
+                <div className="my-4">
                     A 22 year old software developer from Bhutan with a passion to create products
                     that impact. I'm currently interested in Web3 and meditation. For me programming
                     is a means not an end for creating. I love to talk about various topics other

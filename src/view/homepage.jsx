@@ -24,7 +24,7 @@ export default function Homepage() {
                         switch (activeTab) {
                             case 'About':
                                 return (
-                                    <div className="w-full mt-16 h-screen px-4 sm:w-full md:w-4/12 ">
+                                    <div className="w-full mt-16 h-screen px-4  md:w-4/12 ">
                                         <About />
                                     </div>
                                 );
@@ -57,20 +57,6 @@ export default function Homepage() {
                                 );
                         }
                     })()}
-
-                    {/* <div className="w-full mt-16 h-screen px-4 sm:w-full md:w-4/12 ">
-                        <About />
-                    </div>
-
-                    <div className="w-full mt-20 h-screen px-3 sm:w-full md:w-10/12">
-                        <Gallery />
-                    </div>
-                    <div className="w-full mt-16 px-6 md:w-6/12">
-                        <Projects />
-                    </div>
-                    <div className="w-full w-full md:w-10/12 mt-20">
-                        <Books />
-                    </div> */}
                 </div>
             </div>
         </div>
