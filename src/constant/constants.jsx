@@ -1,6 +1,5 @@
 import { AiOutlineLinkedin, AiOutlineGithub } from 'react-icons/ai';
 
-
 export const NAVIGATION = [
     { text: 'About', icon: '🙋' },
     { text: 'Books', icon: '📚' },
@@ -22,7 +21,7 @@ export const SOCIAL_MEDIA = [
 ];
 export const ABOUT = [
     {
-        year: 'Currently',
+        year: 'Present',
         position: 'M.Sc. Student',
         description: 'Computer Science',
         url: 'https://www.cs.usask.ca/',

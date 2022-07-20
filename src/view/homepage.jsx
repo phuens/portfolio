@@ -14,7 +14,7 @@ export default function Homepage() {
     const style = {
         mainContent: 'mt-14 text-white flex justify-center',
     };
-    const [activeTab, setActiveTab] = useState('About');
+    const [activeTab, setActiveTab] = useState('Projects');
     return (
         <div className="w-screen" style={{ backgroundColor: '#111828' }}>
             <Navbar tabChange={tabChange} />

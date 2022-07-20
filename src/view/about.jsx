@@ -41,7 +41,11 @@ export default function About() {
                         </a>
                     );
                 })}
-                <a className="underline text-gray-400" href="../asset/resume.pdf" target="_">
+                <a
+                    className="underline text-blue-400"
+                    href="https://phuens.github.io/portfolio/resume.pdf"
+                    target="_"
+                >
                     resume
                 </a>
             </div>
