@@ -7,7 +7,6 @@ import Books from '../view/book';
 
 export default function Homepage() {
     function tabChange(param) {
-        console.log('current value: ', param);
         setActiveTab(param);
     }
 

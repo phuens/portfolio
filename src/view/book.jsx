@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { LATEST, RATINGCOLORS, CATEGORY_COLORS } from '../constant/books';
 import { HiStar } from 'react-icons/hi';
 import Box from '@mui/material/Box';
@@ -136,8 +137,25 @@ const MobileCard = () => {
         </TableContainer>
     );
 };
+const getBooks = async () => {
+    // console.log(process.env.REACT_APP_NOTION_KEY, process.env.REACT_APP_NOTION_DB_ID);
+    const { Client } = require('@notionhq/client');
+
+    const notion = new Client({ auth: process.env.REACT_APP_NOTION_KEY });
+
+    (async () => {
+        const databaseId = process.env.REACT_APP_NOTION_DB_ID;
+        const response = await notion.databases.query({
+            database_id: databaseId,
+        });
+        console.log(response);
+    })();
+};
 
 export default function Book() {
+    useEffect(() => {
+        getBooks();
+    });
     return (
         <>
             <div className="w-12/12 hidden md:block">
