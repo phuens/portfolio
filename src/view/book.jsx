@@ -1,5 +1,5 @@
 import React from 'react';
-import { LATEST, RATINGCOLORS, CATEGORY_COLORS } from '../constant/books';
+import { RATINGCOLORS, CATEGORY_COLORS } from '../constant/books';
 import { HiStar, HiEmojiSad } from 'react-icons/hi';
 import Box from '@mui/material/Box';
 import Collapse from '@mui/material/Collapse';
@@ -12,7 +12,6 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import { BsArrowReturnRight } from 'react-icons/bs';
 
 const Card = ({ data }) => {
     return data ? (
@@ -97,10 +96,10 @@ function Row({ row }) {
                     style={{ color: 'white', borderBottom: 'solid 1px #2a2a2a80' }}
                 >
                     <div
-                        className="rounded-xl px-4"
+                        className="rounded-xl px-2"
                         style={{ backgroundColor: RATINGCOLORS[row.Rating] }}
                     >
-                        {row.Rating ? `${row.Rating} / 5` : 'no rating'}
+                        {row.Rating ? `${row.Rating}/5` : 'no rating'}
                     </div>
                 </TableCell>
                 <TableCell
