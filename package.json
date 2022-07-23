@@ -1,6 +1,6 @@
 {
-    "name": "personal-website",
-    "homepage": "https://phuens.github.io/portfolio",
+    "name": "phuntsho-web",
+    "homepage": "https://phuens.github.io",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
