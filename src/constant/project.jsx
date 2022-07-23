@@ -54,7 +54,7 @@ export const PROJECTS = [
     {
         name: 'Leetcode',
         description:
-            'This is documentation of my leetcode practice journey. This is mainly done in hopes of being able to learn but more importantly explain code better. During my time as a teaching assistant for a python course, I realized explaining programming is a whole different skill set to master.',
+            'This is mainly to document my leetcode practice journey. This is done in hopes of being able to learn but more importantly explain code better. During my time as a teaching assistant for a python course, I realized explaining programming is a whole different skill set to master.',
         url: 'https://phuntsho-norbu.gitbook.io/leetcode/',
         stickers: 'Stack',
         stacks: [

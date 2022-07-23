@@ -34,7 +34,6 @@ const Card = ({ data }) => {
                             }}
                         >
                             <div className="flex mt-4 mx-2  ">
-                                {/* {console.log('rating: ', book.Rating)} */}
                                 {book.Rating ? (
                                     Array.from({ length: book.Rating }, (_, i) => (
                                         <span
@@ -175,7 +174,6 @@ const MobileCard = ({ data }) => {
 };
 
 export default function Book({ data, error }) {
-    console.log('this is the data that comes here: ', data, error);
     return error ? (
         <div className="h-screen text-2xl flex flex-col text-center  underline mx-4">
             <HiEmojiSad className="w-full text-6xl mb-4" />
