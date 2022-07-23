@@ -14,7 +14,7 @@ export const PROJECTS = [
         name: 'Watson Fellowship',
         description:
             'I was one of only 40 graduates nationwide(US) to be awarded this highly selective grant for independent research outside of the United States and home country. Explored how local robotics capacity is built by looking at how organizations form relationships with local communities to assess and integrate the growing drone technology.',
-        url: 'kongtsey.com',
+        url: 'https://51.watson.foundation/fellows/phuntsho-norbu.html',
         stickers: 'Country',
         stacks: [
             { name: 'Nepal', color: STACK_COLOR['python'] },
