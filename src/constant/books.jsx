@@ -12,6 +12,10 @@ export const CATEGORY_COLORS = {
     reactnative: '#2E294E',
     firestore: '#C19875',
     gitbook: '#A0CED9',
+    business: '#F6AE2D',
+    creativity: '#33658A',
+    productivity: '#EFD9CE',
+    technology: '#D44D5C',
 };
 export const RATINGCOLORS = {
     5: '#62C370',
