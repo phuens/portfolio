@@ -2,6 +2,7 @@ import React from 'react';
 import Hedshot from '../asset/images/about/headshot.png';
 import { SOCIAL_MEDIA } from '../constant/constants';
 import Jobs from '../component/jobPositions';
+import ReactGa from 'react-ga';
 
 export default function About() {
     const style = {
@@ -46,6 +47,9 @@ export default function About() {
                     className="underline text-blue-400 hover:text-blue-300 transition-all duration-200 ease-in"
                     href="https://phuens.github.io/portfolio/resume.pdf"
                     target="_"
+                    onClick={() => {
+                        ReactGa.event({ category: 'resume', action: 'viewed resume' });
+                    }}
                 >
                     resume
                 </a>
