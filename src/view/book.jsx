@@ -12,6 +12,33 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import History2021 from '../asset/images/books/2021-book-summary.png';
+import History2020 from '../asset/images/books/2020-book-summary.png';
+
+const Year = ({ year }) => {
+    return (
+        <div className="mt-10 mb-10 text-center">
+            <h1 className="mb-4 text-4xl font-bold" style={{ fontFamily: 'Major Mono Display' }}>
+                {year}
+            </h1>
+            <hr className="border-gray-700" />
+        </div>
+    );
+};
+
+const History = () => {
+    return (
+        <>
+            <div>
+                <Year year="2021" />
+                <img src={History2021} alt="book history 2021" />
+
+                <Year year="2020" />
+                <img src={History2020} alt="book history 2020" />
+            </div>
+        </>
+    );
+};
 
 const Card = ({ data }) => {
     return data ? (
@@ -182,10 +209,14 @@ export default function Book({ data, error }) {
     ) : (
         <>
             <div className="w-12/12 hidden md:block">
+                <Year year="2022" />
                 <Card data={data} />
+                <History />
             </div>
             <div className="w-12/12 mx-4 block md:hidden lg:hidden">
+                <Year year="2022" />
                 <MobileCard data={data} />
+                <History />
             </div>
         </>
     );
