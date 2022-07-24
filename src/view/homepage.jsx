@@ -8,19 +8,18 @@ import Books from '../view/book';
 export default function Homepage() {
     const [books, setBooks] = useState([]);
     const [bookError, setBookError] = useState();
+    const [loading, setLoading] = useState(true);
     function tabChange(param) {
         setActiveTab(param);
     }
-    // const fetchData = async () => {
-    //     const result = await fetch('https://notion-books-api.herokuapp.com');
-    //     return result;
-    // };
+
     useEffect(() => {
         async function fetchData() {
             try {
                 const response = await fetch('https://notion-books-api.herokuapp.com');
                 const result = await response.json();
                 setBooks(result);
+                setLoading(false);
             } catch (e) {
                 console.error(e);
                 setBookError(e);
@@ -57,7 +56,7 @@ export default function Homepage() {
                             case 'Books':
                                 return (
                                     <div className="w-full w-full md:w-10/12 mt-20">
-                                        <Books data={books} error={bookError} />
+                                        <Books data={books} error={bookError} loading={loading} />
                                     </div>
                                 );
 

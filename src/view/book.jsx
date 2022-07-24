@@ -12,6 +12,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import Loader from '../component/loading';
 import History2021 from '../asset/images/books/2021-book-summary.png';
 import History2020 from '../asset/images/books/2020-book-summary.png';
 
@@ -200,12 +201,15 @@ const MobileCard = ({ data }) => {
     );
 };
 
-export default function Book({ data, error }) {
+export default function Book({ data, error, loading }) {
+    console.log('loading::::: ', loading);
     return error ? (
         <div className="h-screen text-2xl flex flex-col text-center  underline mx-4">
             <HiEmojiSad className="w-full text-6xl mb-4" />
             An error occured. Please try again later
         </div>
+    ) : loading ? (
+        <Loader text="Fetching data from database" />
     ) : (
         <>
             <div className="w-12/12 hidden md:block">
