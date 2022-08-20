@@ -2,9 +2,9 @@ import { AiOutlineLinkedin, AiOutlineGithub } from 'react-icons/ai';
 
 export const NAVIGATION = [
     { text: 'About', icon: '🙋' },
-    { text: 'Books', icon: '📚' },
     { text: 'Pictures', icon: '🖼️' },
     { text: 'Projects', icon: '🏗️' },
+    { text: 'Books', icon: '📚' },
 ];
 
 export const SOCIAL_MEDIA = [
