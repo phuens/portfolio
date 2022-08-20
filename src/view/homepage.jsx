@@ -19,8 +19,7 @@ export default function Homepage() {
                 const response = await fetch('https://notion-books-api.herokuapp.com');
                 const result = await response.json();
                 setBooks(result);
-                console.log('this is the result');
-                setLoading(false);
+                // setLoading(false);
             } catch (e) {
                 console.error(e);
                 setBookError(e);
