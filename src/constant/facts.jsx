@@ -51,7 +51,7 @@ export const FACTS = [
         link: '',
     },
     {
-        text: 'On the other hand, you different fingers',
+        text: 'On the other hand, you have different fingers',
         icon: '🖐️',
         source: 'boredpanda.com',
         link: 'boredpanda.com',
