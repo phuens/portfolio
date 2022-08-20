@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.aee7d6aa.css",
-    "main.js": "/static/js/main.0c1b88ce.js",
+    "main.css": "/static/css/main.0d84df43.css",
+    "main.js": "/static/js/main.ae66b18b.js",
     "static/js/787.5809834d.chunk.js": "/static/js/787.5809834d.chunk.js",
     "static/media/2020-book-summary.png": "/static/media/2020-book-summary.b3dfeef563aabc275051.png",
     "static/media/2021-book-summary.png": "/static/media/2021-book-summary.6ecd2903f8cdfb7d17e6.png",
     "static/media/headshot.png": "/static/media/headshot.1643e400f1d4c40d0adb.png",
     "static/media/ttpl.png": "/static/media/ttpl.2f83e7c9fb57e8e18d91.png",
+    "static/media/loader.gif": "/static/media/loader.78330ae49f45f7281180.gif",
     "static/media/wheaton.jpg": "/static/media/wheaton.a288a7dd537924f71ee3.jpg",
     "static/media/misc.jpg": "/static/media/misc.27365ab63697dfebe505.jpg",
     "static/media/watson.png": "/static/media/watson.e7f62affee234aa3fc5c.png",
@@ -20,12 +21,12 @@
     "static/media/zanzibar.jpg": "/static/media/zanzibar.2ef3e5155b288918292d.jpg",
     "static/media/tanzania.jpg": "/static/media/tanzania.69f040cda2162066f9aa.jpg",
     "index.html": "/index.html",
-    "main.aee7d6aa.css.map": "/static/css/main.aee7d6aa.css.map",
-    "main.0c1b88ce.js.map": "/static/js/main.0c1b88ce.js.map",
+    "main.0d84df43.css.map": "/static/css/main.0d84df43.css.map",
+    "main.ae66b18b.js.map": "/static/js/main.ae66b18b.js.map",
     "787.5809834d.chunk.js.map": "/static/js/787.5809834d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.aee7d6aa.css",
-    "static/js/main.0c1b88ce.js"
+    "static/css/main.0d84df43.css",
+    "static/js/main.ae66b18b.js"
   ]
 }
