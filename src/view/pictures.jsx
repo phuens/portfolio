@@ -3,9 +3,9 @@ import { GALLERY } from '../constant/gallery';
 
 export default function Gallery() {
     return (
-        <div className="flex overflow-x-auto">
+        <div className="flex overflow-x-auto snap-proximity snap-x">
             {GALLERY.map((item) => (
-                <a href={item.url} key={item.title} target="_">
+                <a className="snap-center" href={item.url} key={item.title} target="_">
                     <div
                         key={item.text}
                         className="flex m-2 p-2"

@@ -49,7 +49,7 @@ export default function Homepage() {
                                 );
                             case 'Projects':
                                 return (
-                                    <div className="w-full mt-16 px-6 md:w-6/12">
+                                    <div className="w-full my-16 pb-20 px-6 md:w-6/12">
                                         <Projects />
                                     </div>
                                 );
@@ -71,7 +71,7 @@ export default function Homepage() {
                             default:
                                 return (
                                     <div className="w-full mt-16 px-6 md:w-6/12">
-                                        <Projects />
+                                        <About />
                                     </div>
                                 );
                         }
