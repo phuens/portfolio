@@ -61,34 +61,42 @@ const Card = ({ data }) => {
                                 backdropFilter: 'blur(2px)',
                             }}
                         >
-                            <div className="flex mt-4 mx-2  ">
-                                {book.Rating ? (
-                                    Array.from({ length: book.Rating }, (_, i) => (
-                                        <span
-                                            className="text-xl text-yellow-500"
-                                            key={book.Author + i}
-                                        >
-                                            <HiStar />
-                                        </span>
-                                    ))
-                                ) : (
-                                    <span>nothing</span>
-                                )}
-                            </div>
+                            {book.status === 'Reading' ? (
+                                <p className="text-2xl my-3 text-center text-blue-800">
+                                    Currently Reading
+                                </p>
+                            ) : (
+                                <>
+                                    <div className="flex mt-4 mx-2  ">
+                                        {book.Rating ? (
+                                            Array.from({ length: book.Rating }, (_, i) => (
+                                                <span
+                                                    className="text-xl text-yellow-500"
+                                                    key={book.Author + i}
+                                                >
+                                                    <HiStar />
+                                                </span>
+                                            ))
+                                        ) : (
+                                            <span>nothing</span>
+                                        )}
+                                    </div>
 
-                            <div className="flex text-xs flex-wrap mt-2 ml-2 text-gray-700 ">
-                                {Object.keys(book).indexOf('Genres') === -1
-                                    ? ''
-                                    : book.Genres.map((genre) => (
-                                          <span
-                                              key={book.Name + genre}
-                                              className="mr-2 px-3 text-gray-700 rounded-2xl"
-                                              style={{ background: CATEGORY_COLORS[genre] }}
-                                          >
-                                              {genre}{' '}
-                                          </span>
-                                      ))}
-                            </div>
+                                    <div className="flex text-xs flex-wrap mt-2 ml-2 text-gray-700 ">
+                                        {Object.keys(book).indexOf('Genres') === -1
+                                            ? ''
+                                            : book.Genres.map((genre) => (
+                                                  <span
+                                                      key={book.Name + genre}
+                                                      className="mr-2 px-3 text-gray-700 rounded-2xl"
+                                                      style={{ background: CATEGORY_COLORS[genre] }}
+                                                  >
+                                                      {genre}{' '}
+                                                  </span>
+                                              ))}
+                                    </div>
+                                </>
+                            )}
                         </div>
                     </div>
                 </div>
@@ -126,7 +134,7 @@ function Row({ row }) {
                         className="rounded-xl px-2"
                         style={{ backgroundColor: RATINGCOLORS[row.Rating] }}
                     >
-                        {row.Rating ? `${row.Rating}/5` : 'no rating'}
+                        {row.Rating ? `${row.Rating}/5` : 'Currently Reading'}
                     </div>
                 </TableCell>
                 <TableCell
@@ -202,14 +210,13 @@ const MobileCard = ({ data }) => {
 };
 
 export default function Book({ data, error, loading }) {
-    console.log('loading::::: ', loading);
     return error ? (
         <div className="h-screen text-2xl flex flex-col text-center  underline mx-4">
             <HiEmojiSad className="w-full text-6xl mb-4" />
             An error occured. Please try again later
         </div>
     ) : loading ? (
-        <Loader text="Fetching data from database" />
+        <Loader text="Fetching data from database" books={true} />
     ) : (
         <>
             <div className="w-12/12 hidden md:block">
