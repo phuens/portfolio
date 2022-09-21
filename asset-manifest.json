@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.6a44c7f7.css",
-    "main.js": "/static/js/main.1c87cf80.js",
+    "main.js": "/static/js/main.d183d51d.js",
     "static/js/787.5809834d.chunk.js": "/static/js/787.5809834d.chunk.js",
     "static/media/2020-book-summary.png": "/static/media/2020-book-summary.b3dfeef563aabc275051.png",
     "static/media/2021-book-summary.png": "/static/media/2021-book-summary.6ecd2903f8cdfb7d17e6.png",
@@ -22,11 +22,11 @@
     "static/media/tanzania.jpg": "/static/media/tanzania.69f040cda2162066f9aa.jpg",
     "index.html": "/index.html",
     "main.6a44c7f7.css.map": "/static/css/main.6a44c7f7.css.map",
-    "main.1c87cf80.js.map": "/static/js/main.1c87cf80.js.map",
+    "main.d183d51d.js.map": "/static/js/main.d183d51d.js.map",
     "787.5809834d.chunk.js.map": "/static/js/787.5809834d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6a44c7f7.css",
-    "static/js/main.1c87cf80.js"
+    "static/js/main.d183d51d.js"
   ]
 }
