@@ -16,7 +16,7 @@ export const SOCIAL_MEDIA = [
     {
         text: 'Github',
         icon: <AiOutlineGithub />,
-        url: 'https://www.linkedin.com/in/phuntsho-norbu/',
+        url: 'https://www.github.com/phuens',
     },
 ];
 export const ABOUT = [
