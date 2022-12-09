@@ -18,7 +18,7 @@ import History2020 from '../asset/images/books/2020-book-summary.png';
 
 const Year = ({ year }) => {
     return (
-        <div className="mt-10 mb-10 text-center">
+        <div className="mb-10 text-center">
             <h1 className="mb-4 text-4xl font-bold" style={{ fontFamily: 'Major Mono Display' }}>
                 {year}
             </h1>
@@ -30,7 +30,7 @@ const Year = ({ year }) => {
 const History = () => {
     return (
         <>
-            <div>
+            <div className='mt-10'>
                 <Year year="2021" />
                 <img src={History2021} alt="book history 2021" />
 
@@ -51,7 +51,7 @@ const Card = ({ data }) => {
                         backgroundSize: 'cover',
                         backgroundRepeat: 'None',
                     }}
-                    className="flex border flex-wrap w-64 h-96 border-3 justify-center mx-6 my-4"
+                    className="flex border flex-wrap w-64 h-96 mt-4 border-3 justify-center mx-6 "
                     key={book.name}
                 >
                     <div className="flex items-end ">

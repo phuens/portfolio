@@ -1,7 +1,7 @@
 import React from 'react';
 import { NAVIGATION } from '../constant/constants';
 import Emoji from './emoji';
-import ReactGa from 'react-ga'
+import ReactGa from 'react-ga4'
 
 
 export default function Navbar({ tabChange }) {

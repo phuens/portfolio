@@ -2,7 +2,7 @@ import React from 'react';
 import Hedshot from '../asset/images/about/headshot.png';
 import { SOCIAL_MEDIA } from '../constant/constants';
 import Jobs from '../component/jobPositions';
-import ReactGa from 'react-ga';
+import ReactGa from 'react-ga4';
 
 export default function About() {
     const style = {
