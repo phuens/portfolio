@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7ecc097d.css",
-    "main.js": "/static/js/main.f6039f61.js",
+    "main.css": "/static/css/main.5e6fda7a.css",
+    "main.js": "/static/js/main.300b9656.js",
     "static/js/787.5809834d.chunk.js": "/static/js/787.5809834d.chunk.js",
     "static/media/2020-book-summary.png": "/static/media/2020-book-summary.b3dfeef563aabc275051.png",
     "static/media/book_of_two_ways.jpg": "/static/media/book_of_two_ways.cc3a6d98af8175055fab.jpg",
@@ -30,12 +30,12 @@
     "static/media/tanzania.jpg": "/static/media/tanzania.69f040cda2162066f9aa.jpg",
     "static/media/almanack_of_naval.jpg": "/static/media/almanack_of_naval.46c9c8c5392230cdee5b.jpg",
     "index.html": "/index.html",
-    "main.7ecc097d.css.map": "/static/css/main.7ecc097d.css.map",
-    "main.f6039f61.js.map": "/static/js/main.f6039f61.js.map",
+    "main.5e6fda7a.css.map": "/static/css/main.5e6fda7a.css.map",
+    "main.300b9656.js.map": "/static/js/main.300b9656.js.map",
     "787.5809834d.chunk.js.map": "/static/js/787.5809834d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7ecc097d.css",
-    "static/js/main.f6039f61.js"
+    "static/css/main.5e6fda7a.css",
+    "static/js/main.300b9656.js"
   ]
 }
