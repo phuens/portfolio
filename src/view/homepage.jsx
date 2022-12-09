@@ -5,6 +5,7 @@ import Gallery from '../view/pictures';
 import Projects from '../view/projects';
 import Books from '../view/book';
 
+
 export default function Homepage() {
     function tabChange(param) {
         setActiveTab(param);

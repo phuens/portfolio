@@ -194,7 +194,6 @@ function Row({ row }) {
     );
 }
 const MobileCard = () => {
-    console.log("this is the BOOKS: ", BOOKS)
     return (
         <TableContainer
             style={{ backgroundColor: 'transparent', color: 'white', border: 'solid 1px gray' }}

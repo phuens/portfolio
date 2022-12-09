@@ -11,6 +11,8 @@ export default function About() {
         headshot: ' items-center rounded-full w-2/12  md:w-2/12',
         socialMedia: 'text-2xl pr-8 text-gray-400',
     };
+
+
     return (
         <>
             <div className="flex flex-col">
@@ -38,7 +40,9 @@ export default function About() {
             <div className="my-4 flex flex-row">
                 {SOCIAL_MEDIA.map((item) => {
                     return (
-                        <a key={item.text} className={style.socialMedia} href={item.url} target="_">
+                        <a key={item.text} className={style.socialMedia} href={item.url} target="_"   onClick={() => {
+                            ReactGa.event({ category: item.text, action: item.text });
+                        }}>
                             {item.icon}
                         </a>
                     );
