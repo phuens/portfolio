@@ -1,6 +1,6 @@
 import React from 'react';
-import { RATINGCOLORS, CATEGORY_COLORS } from '../constant/books';
-import { HiStar, HiEmojiSad } from 'react-icons/hi';
+import { RATINGCOLORS, CATEGORY_COLORS, BOOKS} from '../constant/books';
+import { HiStar} from 'react-icons/hi';
 import Box from '@mui/material/Box';
 import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
@@ -12,7 +12,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import Loader from '../component/loading';
+
 import History2021 from '../asset/images/books/2021-book-summary.png';
 import History2020 from '../asset/images/books/2020-book-summary.png';
 
@@ -47,12 +47,12 @@ const Card = ({ data }) => {
             {data.map((book) => (
                 <div
                     style={{
-                        backgroundImage: `url(${book.image})`,
+                        backgroundImage: `url(${book.url})`,
                         backgroundSize: 'cover',
                         backgroundRepeat: 'None',
                     }}
                     className="flex border flex-wrap w-64 h-96 border-3 justify-center mx-6 my-4"
-                    key={book.Name}
+                    key={book.name}
                 >
                     <div className="flex items-end ">
                         <div
@@ -68,11 +68,11 @@ const Card = ({ data }) => {
                             ) : (
                                 <>
                                     <div className="flex mt-4 mx-2  ">
-                                        {book.Rating ? (
-                                            Array.from({ length: book.Rating }, (_, i) => (
+                                        {book.rating ? (
+                                            Array.from({ length: book.rating }, (_, i) => (
                                                 <span
                                                     className="text-xl text-yellow-500"
-                                                    key={book.Author + i}
+                                                    key={book.author + i}
                                                 >
                                                     <HiStar />
                                                 </span>
@@ -83,13 +83,13 @@ const Card = ({ data }) => {
                                     </div>
 
                                     <div className="flex text-xs flex-wrap mt-2 ml-2 text-gray-700 ">
-                                        {Object.keys(book).indexOf('Genres') === -1
+                                        {Object.keys(book).indexOf('genres') === -1
                                             ? ''
-                                            : book.Genres.map((genre) => (
+                                            : book.genres.map((genre) => (
                                                   <span
                                                       key={book.Name + genre}
                                                       className="mr-2 px-3 text-gray-700 rounded-2xl"
-                                                      style={{ background: CATEGORY_COLORS[genre] }}
+                                                      style={{ background: CATEGORY_COLORS[genre.toLowerCase()] }}
                                                   >
                                                       {genre}{' '}
                                                   </span>
@@ -116,14 +116,14 @@ function Row({ row }) {
                     className=" w-4 flex content-center"
                     style={{ borderBottom: 'solid 1px #2a2a2a80' }}
                 >
-                    <img className="w-12/12 rounded-md" src={`${row.image}`} alt="book" />
+                    <img className="w-12/12 rounded-md" src={`${row.url}`} alt="book" />
                 </TableCell>
                 <TableCell
                     component="th"
                     scope="row"
                     style={{ color: 'white', borderBottom: 'solid 1px #2a2a2a80' }}
                 >
-                    {row.Name}
+                    {row.name}
                 </TableCell>
                 <TableCell
                     align="center"
@@ -134,7 +134,7 @@ function Row({ row }) {
                         className="rounded-xl px-2"
                         style={{ backgroundColor: RATINGCOLORS[row.Rating] }}
                     >
-                        {row.Rating ? `${row.Rating}/5` : 'Currently Reading'}
+                        {row.rating ? `${row.rating}/5` : 'Currently Reading'}
                     </div>
                 </TableCell>
                 <TableCell
@@ -163,7 +163,7 @@ function Row({ row }) {
                                             className="flex"
                                             style={{ color: 'white', borderBottom: 'none' }}
                                         >
-                                            {row.Author}
+                                            {row.author}
                                         </TableCell>
                                         <TableCell
                                             className="text-center"
@@ -193,15 +193,16 @@ function Row({ row }) {
         </React.Fragment>
     );
 }
-const MobileCard = ({ data }) => {
+const MobileCard = () => {
+    console.log("this is the BOOKS: ", BOOKS)
     return (
         <TableContainer
             style={{ backgroundColor: 'transparent', color: 'white', border: 'solid 1px gray' }}
         >
             <Table aria-label="collapsible table">
                 <TableBody className="flex">
-                    {data.map((row) => (
-                        <Row row={row} key={'card' + row.Name + row.Author} />
+                    {BOOKS.map((row) => (
+                        <Row row={row} key={'card' + row.name + row.Author} />
                     ))}
                 </TableBody>
             </Table>
@@ -209,26 +210,18 @@ const MobileCard = ({ data }) => {
     );
 };
 
-export default function Book({ data, error, loading }) {
-    return error ? (
-        <div className="h-screen text-2xl flex flex-col text-center  underline mx-4">
-            <HiEmojiSad className="w-full text-6xl mb-4" />
-            An error occured. Please try again later
+export default function Book() {
+    return (<>
+        <div className="w-12/12 hidden md:block">
+            <Year year="2022" />
+            <Card data={BOOKS} />
+            <History />
         </div>
-    ) : loading ? (
-        <Loader text="Fetching data from database" books={true} />
-    ) : (
-        <>
-            <div className="w-12/12 hidden md:block">
-                <Year year="2022" />
-                <Card data={data} />
-                <History />
-            </div>
-            <div className="w-12/12 mx-4 block md:hidden lg:hidden">
-                <Year year="2022" />
-                <MobileCard data={data} />
-                <History />
-            </div>
-        </>
-    );
+
+        <div className="w-12/12 mx-4 block md:hidden lg:hidden">
+            <Year year="2022" />
+            <MobileCard/>
+            <History />
+        </div>
+    </>)
 }
