@@ -1,15 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.6a44c7f7.css",
-    "main.js": "/static/js/main.d183d51d.js",
+    "main.css": "/static/css/main.7ecc097d.css",
+    "main.js": "/static/js/main.38e5d090.js",
     "static/js/787.5809834d.chunk.js": "/static/js/787.5809834d.chunk.js",
     "static/media/2020-book-summary.png": "/static/media/2020-book-summary.b3dfeef563aabc275051.png",
+    "static/media/book_of_two_ways.jpg": "/static/media/book_of_two_ways.cc3a6d98af8175055fab.jpg",
+    "static/media/fahrenheit_451.jpg": "/static/media/fahrenheit_451.bbc77d9dbe5a57cce194.jpg",
+    "static/media/atomic_habits.jpg": "/static/media/atomic_habits.858c96b56dc40371c0f6.jpg",
+    "static/media/rich_dad_poor_dad.jpg": "/static/media/rich_dad_poor_dad.ea1d777a789c76ce6e4a.jpg",
     "static/media/2021-book-summary.png": "/static/media/2021-book-summary.6ecd2903f8cdfb7d17e6.png",
     "static/media/headshot.png": "/static/media/headshot.1643e400f1d4c40d0adb.png",
+    "static/media/psychology_of_money.jpg": "/static/media/psychology_of_money.22f0a551c1397422cabd.jpg",
+    "static/media/numbers_dont_lie.jpg": "/static/media/numbers_dont_lie.6d4213075a39e43e3915.jpg",
     "static/media/ttpl.png": "/static/media/ttpl.2f83e7c9fb57e8e18d91.png",
-    "static/media/loader.gif": "/static/media/loader.78330ae49f45f7281180.gif",
+    "static/media/bezonomics.jpg": "/static/media/bezonomics.e50d51638c5f25688198.jpg",
+    "static/media/chatter.jpg": "/static/media/chatter.396d7f86d2bc82cf7b1d.jpg",
     "static/media/wheaton.jpg": "/static/media/wheaton.a288a7dd537924f71ee3.jpg",
     "static/media/misc.jpg": "/static/media/misc.27365ab63697dfebe505.jpg",
+    "static/media/meditations.jpg": "/static/media/meditations.caf040b0bb880c69cb14.jpg",
     "static/media/watson.png": "/static/media/watson.e7f62affee234aa3fc5c.png",
     "static/media/nepal.jpg": "/static/media/nepal.659987f0944d162471fd.jpg",
     "static/media/usask.png": "/static/media/usask.c80d6976213e2d0e62e7.png",
@@ -20,13 +28,14 @@
     "static/media/kenya.jpg": "/static/media/kenya.0ccc8a9d04e2716f23f9.jpg",
     "static/media/zanzibar.jpg": "/static/media/zanzibar.2ef3e5155b288918292d.jpg",
     "static/media/tanzania.jpg": "/static/media/tanzania.69f040cda2162066f9aa.jpg",
+    "static/media/almanack_of_naval.jpg": "/static/media/almanack_of_naval.46c9c8c5392230cdee5b.jpg",
     "index.html": "/index.html",
-    "main.6a44c7f7.css.map": "/static/css/main.6a44c7f7.css.map",
-    "main.d183d51d.js.map": "/static/js/main.d183d51d.js.map",
+    "main.7ecc097d.css.map": "/static/css/main.7ecc097d.css.map",
+    "main.38e5d090.js.map": "/static/js/main.38e5d090.js.map",
     "787.5809834d.chunk.js.map": "/static/js/787.5809834d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6a44c7f7.css",
-    "static/js/main.d183d51d.js"
+    "static/css/main.7ecc097d.css",
+    "static/js/main.38e5d090.js"
   ]
 }
