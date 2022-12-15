@@ -1,19 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.5e6fda7a.css",
-    "main.js": "/static/js/main.96ddc195.js",
+    "main.js": "/static/js/main.8dadc4ef.js",
     "static/js/787.5809834d.chunk.js": "/static/js/787.5809834d.chunk.js",
     "static/media/2020-book-summary.png": "/static/media/2020-book-summary.b3dfeef563aabc275051.png",
     "static/media/book_of_two_ways.jpg": "/static/media/book_of_two_ways.cc3a6d98af8175055fab.jpg",
     "static/media/fahrenheit_451.jpg": "/static/media/fahrenheit_451.bbc77d9dbe5a57cce194.jpg",
-    "static/media/atomic_habits.jpg": "/static/media/atomic_habits.858c96b56dc40371c0f6.jpg",
     "static/media/rich_dad_poor_dad.jpg": "/static/media/rich_dad_poor_dad.ea1d777a789c76ce6e4a.jpg",
     "static/media/2021-book-summary.png": "/static/media/2021-book-summary.6ecd2903f8cdfb7d17e6.png",
+    "static/media/educated.jpeg": "/static/media/educated.5d2e9f9e0d4936306c10.jpeg",
     "static/media/headshot.png": "/static/media/headshot.1643e400f1d4c40d0adb.png",
     "static/media/psychology_of_money.jpg": "/static/media/psychology_of_money.22f0a551c1397422cabd.jpg",
     "static/media/numbers_dont_lie.jpg": "/static/media/numbers_dont_lie.6d4213075a39e43e3915.jpg",
     "static/media/ttpl.png": "/static/media/ttpl.2f83e7c9fb57e8e18d91.png",
-    "static/media/bezonomics.jpg": "/static/media/bezonomics.e50d51638c5f25688198.jpg",
     "static/media/chatter.jpg": "/static/media/chatter.396d7f86d2bc82cf7b1d.jpg",
     "static/media/wheaton.jpg": "/static/media/wheaton.a288a7dd537924f71ee3.jpg",
     "static/media/misc.jpg": "/static/media/misc.27365ab63697dfebe505.jpg",
@@ -31,11 +30,11 @@
     "static/media/almanack_of_naval.jpg": "/static/media/almanack_of_naval.46c9c8c5392230cdee5b.jpg",
     "index.html": "/index.html",
     "main.5e6fda7a.css.map": "/static/css/main.5e6fda7a.css.map",
-    "main.96ddc195.js.map": "/static/js/main.96ddc195.js.map",
+    "main.8dadc4ef.js.map": "/static/js/main.8dadc4ef.js.map",
     "787.5809834d.chunk.js.map": "/static/js/787.5809834d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5e6fda7a.css",
-    "static/js/main.96ddc195.js"
+    "static/js/main.8dadc4ef.js"
   ]
 }
