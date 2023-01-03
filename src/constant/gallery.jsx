@@ -1,5 +1,5 @@
 import BHUTAN from '../asset/images/gallery/bhutan.jpg';
-import CANADA from '../asset/images/gallery/canada.png';
+import CANADA from '../asset/images/gallery/canada.jpg';
 import KENYA from '../asset/images/gallery/kenya.jpg';
 import MAURITIUS from '../asset/images/gallery/mauritius.jpg';
 import MISC from '../asset/images/gallery/misc.jpg';
