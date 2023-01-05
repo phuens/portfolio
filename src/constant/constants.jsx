@@ -5,6 +5,7 @@ export const NAVIGATION = [
     { text: 'Pictures', icon: '🖼️' },
     { text: 'Projects', icon: '🏗️' },
     { text: 'Books', icon: '📚' },
+    { text: 'TIL', icon: '💡' },
 ];
 
 export const SOCIAL_MEDIA = [
@@ -51,3 +52,15 @@ export const ABOUT = [
         shortForm: 'Watson',
     },
 ];
+
+
+export const firebaseConfig = {
+    apiKey: "AIzaSyBwoXrJNEqQ9aj-cHcHV2mKKTBjL1F9Xes",
+    authDomain: "todayilearned-4ddce.firebaseapp.com",
+    projectId: "todayilearned-4ddce",
+    storageBucket: "todayilearned-4ddce.appspot.com",
+    messagingSenderId: "1022375555309",
+    appId: "1:1022375555309:web:bbfb1791f9756e9eef5ce4",
+    measurementId: "G-5XY0QGBKLD"
+  };
+  

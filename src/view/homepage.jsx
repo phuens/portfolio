@@ -4,6 +4,7 @@ import About from '../view/about';
 import Gallery from '../view/pictures';
 import Projects from '../view/projects';
 import Books from '../view/book';
+import TIL from '../view/TIL'
 
 
 export default function Homepage() {
@@ -49,6 +50,13 @@ export default function Homepage() {
                                         <Gallery />
                                     </div>
                                 );
+                            
+                                case 'TIL':
+                                    return (
+                                        <div className="w-full mt-16 h-screen px-4 md:w-10/12">
+                                            <TIL />
+                                        </div>
+                                    );
 
                             default:
                                 return (
