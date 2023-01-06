@@ -1,25 +1,25 @@
-import React, { useState} from 'react';
+import React, { useEffect, useState} from 'react';
 import Modal from '@mui/material/Modal';
 
+import {fetchTIL} from '../api/api'
 
 export default function TIL() {
 
     const [modalOpen, setModalOpen] = useState(false);
+    const [items, setItems] = useState([])
 
-    const data = [
-        {
-            "title": "Hello world", 
-            "date" : "23rd november 2022", 
-            "content": "this is the world where there is a lot of controversy and a lot of debate", 
-            "liked": 1, 
-        }, 
-        {
-            "title": "Hello awdhawdjkh", 
-            "date" : "23rd november 2022", 
-            "content": "this is the wasdasdorld where there is a lot of controversy and a lot of debate", 
-            "liked": 5, 
-        }, 
-    ]
+    useEffect(()=> {
+        async function fetchItems(){
+            const data = await fetchTIL()
+            console.log("hello world")
+            setItems(data)
+            
+            console.log("-----> ", data)
+        }
+        fetchItems()
+    }, [])
+
+
 
     const jumbotron = ({data}) => {
         <div className="flex flex-col">
@@ -83,7 +83,7 @@ export default function TIL() {
                                     </button>
                                 </p>
 
-                            </div>
+                            </div>fetchTIL
                         </div>
                     </Modal>
                     </div>
