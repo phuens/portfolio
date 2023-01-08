@@ -1,6 +1,6 @@
 import React from 'react';
-import { RATINGCOLORS, CATEGORY_COLORS, BOOKS} from '../constant/books';
-import { HiStar} from 'react-icons/hi';
+import { RATINGCOLORS, CATEGORY_COLORS, BOOKS } from '../constant/books';
+import { HiStar } from 'react-icons/hi';
 import Box from '@mui/material/Box';
 import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
@@ -30,7 +30,7 @@ const Year = ({ year }) => {
 const History = () => {
     return (
         <>
-            <div className='mt-10'>
+            <div className="mt-10">
                 <Year year="2021" />
                 <img src={History2021} alt="book history 2021" />
 
@@ -89,7 +89,10 @@ const Card = ({ data }) => {
                                                   <span
                                                       key={book.Name + genre}
                                                       className="mr-2 px-3 text-gray-700 rounded-2xl"
-                                                      style={{ background: CATEGORY_COLORS[genre.toLowerCase()] }}
+                                                      style={{
+                                                          background:
+                                                              CATEGORY_COLORS[genre.toLowerCase()],
+                                                      }}
                                                   >
                                                       {genre}{' '}
                                                   </span>
@@ -210,17 +213,19 @@ const MobileCard = () => {
 };
 
 export default function Book() {
-    return (<>
-        <div className="w-12/12 hidden md:block">
-            <Year year="2022" />
-            <Card data={BOOKS} />
-            <History />
-        </div>
+    return (
+        <>
+            <div className="w-12/12 hidden md:block">
+                <Year year="2022" />
+                <Card data={BOOKS} />
+                <History />
+            </div>
 
-        <div className="w-12/12 mx-4 block md:hidden lg:hidden">
-            <Year year="2022" />
-            <MobileCard/>
-            <History />
-        </div>
-    </>)
+            <div className="w-12/12 mx-4 block md:hidden lg:hidden">
+                <Year year="2022" />
+                <MobileCard />
+                <History />
+            </div>
+        </>
+    );
 }

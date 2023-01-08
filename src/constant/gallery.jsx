@@ -1,4 +1,5 @@
 import BHUTAN from '../asset/images/gallery/bhutan.jpg';
+import CANADA from '../asset/images/gallery/canada.jpg';
 import KENYA from '../asset/images/gallery/kenya.jpg';
 import MAURITIUS from '../asset/images/gallery/mauritius.jpg';
 import MISC from '../asset/images/gallery/misc.jpg';
@@ -10,6 +11,13 @@ import ZANZIBAR from '../asset/images/gallery/zanzibar.jpg';
 import TANZANIA from '../asset/images/gallery/tanzania.jpg';
 
 export const GALLERY = [
+    {
+        title: 'canada',
+        location: 'canada',
+        path: CANADA,
+        time: '2021',
+        url: 'https://www.flickr.com/photos/phuens/albums/72177720304844286',
+    },
     {
         title: 'bhutan',
         location: 'bhutan',

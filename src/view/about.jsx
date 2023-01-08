@@ -1,5 +1,5 @@
 import React from 'react';
-import Hedshot from '../asset/images/about/headshot.png';
+import Hedshot from '../asset/images/about/headshot.jpg';
 import { SOCIAL_MEDIA } from '../constant/constants';
 import Jobs from '../component/jobPositions';
 import ReactGa from 'react-ga4';
@@ -11,7 +11,6 @@ export default function About() {
         headshot: ' items-center rounded-full w-2/12  md:w-2/12',
         socialMedia: 'text-2xl pr-8 text-gray-400',
     };
-
 
     return (
         <>
@@ -40,9 +39,15 @@ export default function About() {
             <div className="my-4 flex flex-row">
                 {SOCIAL_MEDIA.map((item) => {
                     return (
-                        <a key={item.text} className={style.socialMedia} href={item.url} target="_"   onClick={() => {
-                            ReactGa.event({ category: item.text, action: item.text });
-                        }}>
+                        <a
+                            key={item.text}
+                            className={style.socialMedia}
+                            href={item.url}
+                            target="_"
+                            onClick={() => {
+                                ReactGa.event({ category: item.text, action: item.text });
+                            }}
+                        >
                             {item.icon}
                         </a>
                     );
