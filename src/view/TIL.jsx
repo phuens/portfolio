@@ -8,16 +8,16 @@ export default function TIL() {
     const [modalOpen, setModalOpen] = useState(false);
     const [items, setItems] = useState([])
 
-    useEffect(()=> {
-        async function fetchItems(){
-            const data = await fetchTIL()
-            console.log("hello world")
-            setItems(data)
+    // useEffect(()=> {
+    //     async function fetchItems(){
+    //         const data = await fetchTIL()
+    //         console.log("hello world")
+    //         setItems(data)
             
-            console.log("-----> ", data)
-        }
-        fetchItems()
-    }, [])
+    //         console.log("-----> ", data)
+    //     }
+    //     fetchItems()
+    // }, [])
 
 
 
@@ -83,13 +83,14 @@ export default function TIL() {
                                     </button>
                                 </p>
 
-                            </div>fetchTIL
+                            </div>
                         </div>
                     </Modal>
-                    </div>
+                </div>
             </div>
-            
+    
             <hr className='mt-2'/>
+            <div className='text-center mt-4 text-2xl'> Coming Soon</div>
         </div>
 
         </>
