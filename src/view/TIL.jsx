@@ -1,23 +1,21 @@
 import React, { useEffect, useState} from 'react';
 import Modal from '@mui/material/Modal';
+import {collection, getDocs} from 'firebase/firestore'
 
-import {fetchTIL} from '../api/api'
+import db from '../api/firestore'
 
 export default function TIL() {
 
     const [modalOpen, setModalOpen] = useState(false);
     const [items, setItems] = useState([])
 
-    // useEffect(()=> {
-    //     async function fetchItems(){
-    //         const data = await fetchTIL()
-    //         console.log("hello world")
-    //         setItems(data)
-            
-    //         console.log("-----> ", data)
-    //     }
-    //     fetchItems()
-    // }, [])
+    useEffect(()=> {
+        const getData = async () => {
+            const data = await getDocs(collection(db, "TIL/"))
+            setItems(data.docs.map((doc) => ({...doc.data(), id:doc.id})))
+        }
+        getData()
+    }, [])
 
 
 
@@ -41,7 +39,7 @@ export default function TIL() {
         </div>
     }
 
-
+    console.log(items)
     return (
         <>
         <div className="flex flex-col ">
@@ -91,6 +89,7 @@ export default function TIL() {
     
             <hr className='mt-2'/>
             <div className='text-center mt-4 text-2xl'> Coming Soon</div>
+            
         </div>
 
         </>
