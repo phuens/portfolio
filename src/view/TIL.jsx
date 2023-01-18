@@ -19,24 +19,18 @@ export default function TIL() {
 
 
 
-    const jumbotron = ({data}) => {
-        <div className="flex flex-col">
-            {data.map((item) => (
-                <div>
-                    <h2>{item.title}</h2>
-                    <p>{item.date}</p>
-                    <hr/>
-
-                    <div>
-                        {item.content}
-                    </div>
-
-                    <div>
-                        <span>UP</span> <span>{item.liked}</span>   
-                    </div>
+    const Jumbotron = ({data}) => {
+        return (
+            <div className="border flex flex-col p-4 md:p-4 rounded-xl bg-white text-sm text-blue-900">
+                
+                <p className="text-xl mb-2 text-center">{data.content}</p>
+                <hr/>
+                <div className="flex flex-row mt-4 justify-between text-xs">
+                    <button className=''>🫰 {data.liked}</button>
+                    <p>Monday 21st June 2022</p>
                 </div>
-            ))}
-        </div>
+            </div>
+        )
     }
 
     console.log(items)
@@ -80,6 +74,25 @@ export default function TIL() {
                                         Close
                                     </button>
                                 </p>
+                                <form className="flex flex-col">
+                                    <label className='text-white my-2'>
+                                        Genre: &nbsp;&nbsp;
+                                        <input className="p-2 text-black w-10/12 rounded-sm" name="genre" type="text" />  
+                                    </label>
+                                    <label className='text-white my-2'>
+                                        Content: &nbsp;&nbsp;
+                                        <input className="p-2 text-black w-10/12 rounded-sm" name="content" type="textarea" />  
+                                    </label>
+                                    <label className='text-white my-2'>
+                                        Date: &nbsp;&nbsp;
+                                        <input className="p-2 text-black w-10/12 rounded-sm" name="date" type="date" />  
+                                    </label>
+
+                                    <label className='text-white my-2'>
+                                        Password: &nbsp;&nbsp;
+                                        <input className="p-2 text-black w-10/12 rounded-sm" name="password" type="password" />  
+                                    </label>
+                                </form>
 
                             </div>
                         </div>
@@ -90,6 +103,9 @@ export default function TIL() {
             <hr className='mt-2'/>
             <div className='text-center mt-4 text-2xl'> Coming Soon</div>
             
+            <div className='flex flex-row'>
+                {items.map((item, index) => <div className='w-4/12 mx-2'><Jumbotron data={item} key={index}/> </div>)}
+            </div>
         </div>
 
         </>
