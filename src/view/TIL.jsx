@@ -3,6 +3,7 @@ import Modal from '@mui/material/Modal';
 import {collection, getDocs} from 'firebase/firestore'
 
 import db from '../api/firestore'
+import { Button } from '@mui/material';
 
 export default function TIL() {
 
@@ -65,7 +66,7 @@ export default function TIL() {
                                     boxShadow: '1px 2px 12px -1px rgba(255,255,255,0.66)',
                                 }}
                             >
-                                <p className="text-md text-center mb-4 text-white md:text-2xl">
+                                <p className="text-md text-center mb-8 text-white md:text-2xl">
                                     THANK YOU FOR WAITING ✌️
                                     <button
                                         onClick={() => setModalOpen(false)}
@@ -74,24 +75,36 @@ export default function TIL() {
                                         Close
                                     </button>
                                 </p>
-                                <form className="flex flex-col">
-                                    <label className='text-white my-2'>
-                                        Genre: &nbsp;&nbsp;
-                                        <input className="p-2 text-black w-10/12 rounded-sm" name="genre" type="text" />  
-                                    </label>
-                                    <label className='text-white my-2'>
-                                        Content: &nbsp;&nbsp;
-                                        <input className="p-2 text-black w-10/12 rounded-sm" name="content" type="textarea" />  
-                                    </label>
-                                    <label className='text-white my-2'>
-                                        Date: &nbsp;&nbsp;
-                                        <input className="p-2 text-black w-10/12 rounded-sm" name="date" type="date" />  
-                                    </label>
+                                <form className="flex flex-col px-4">
+
+                                    <div className='flex flex-row justify-between my-2'>
+                                        <div className="w-6/12">
+                                            <label className='text-white my-2'>
+                                                <input className="p-2 text-black w-full rounded-sm" name="genre" type="text" placeholder="Category 📂"/>  
+                                            </label>
+                                        </div>
+                                        <div className="w-6/12">
+                                            <label className='text-white my-2'>
+                                                <input className="p-2 float-right text-black w-11/12 rounded-sm" name="date" type="date"/>  
+                                            </label>
+                                        </div>
+                                    </div>
 
                                     <label className='text-white my-2'>
-                                        Password: &nbsp;&nbsp;
-                                        <input className="p-2 text-black w-10/12 rounded-sm" name="password" type="password" />  
+                                        <textarea className="p-2 text-black w-full rounded-sm" rows="4" name="content" type="textarea" placeholder="Content 📖"/>  
                                     </label>
+                                    
+                                    <div className="flex flex-row w-full">
+                                        <label className='text-white my-2 w-8/12'>
+                                            <input className="p-2 text-black w-10/12 rounded-sm" name="password" type="password" placeholder="Password 🔑"/>  
+                                        </label>
+                                        <div className='py-4'>
+                                            <button className="border px-4 rounded-xl text-md text-white">
+                                                Submit
+                                            </button>
+                                        </div>
+
+                                    </div>
                                 </form>
 
                             </div>
