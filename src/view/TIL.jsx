@@ -119,7 +119,7 @@ export default function TIL() {
                         className="border flex flex-row px-4 md:px-4 rounded-xl bg-white text-sm text-blue-900 float-right"
                         onClick={() => setModalOpen(true)}
                     >
-                       TIL 🤔
+                       Upload 🤔
                     </button>
                     <Modal
                         open={modalOpen}
