@@ -53,7 +53,7 @@ export default function Homepage() {
                             
                                 case 'TIL':
                                     return (
-                                        <div className="w-full mt-16 h-screen px-4 md:w-10/12">
+                                        <div className="w-full mt-16 mb-12 px-4 md:w-10/12">
                                             <TIL />
                                         </div>
                                     );
