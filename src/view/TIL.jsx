@@ -137,9 +137,9 @@ export default function TIL() {
                         aria-labelledby="modal-modal-title"
                         aria-describedby="modal-modal-description"
                     >
-                        <div className="w-12/12 mt-24 flex justify-center">
+                        <div className="w-12/12 mt-24 flex justify-center ">
                             <div
-                                className="px-4 py-12 w-11/12 md:w-10/12 md:p-12"
+                                className="px-4 py-12 w-11/12 md:w-10/12 md:p-12 rounded-xl"
                                 style={{
                                     backgroundColor: '#070911',
                                     boxShadow: '1px 2px 12px -1px rgba(255,255,255,0.66)',
@@ -149,7 +149,10 @@ export default function TIL() {
                                    
                                     <button
                                         onClick={() => setModalOpen(false)}
-                                        className="border px-4 py-3 transition-all rounded-full text-sm text-white float-right md:mt-2 hover:text-indigo-900 hover:bg-white"
+                                        style={{
+                                            boxShadow:  "1px 1px 1px #000, -1px -1px 3px #090c16"
+                                        }}
+                                        className="px-4 py-3 transition-all text-sm text-white float-right md:mt-2 hover:text-indigo-900 hover:rounded-full"
                                     >
                                         X
                                     </button>
