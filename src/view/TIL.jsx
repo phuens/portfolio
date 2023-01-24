@@ -1,6 +1,6 @@
 import React, { useEffect, useState} from 'react';
 import Modal from '@mui/material/Modal';
-import {collection, doc, getDocs, setDoc, Timestamp} from 'firebase/firestore'
+import {collection, doc, getDocs, setDoc, Timestamp, updateDoc} from 'firebase/firestore'
 import moment from 'moment'
 
 import db from '../api/firestore'
@@ -15,18 +15,20 @@ export default function TIL() {
     const hashedPassword = "d4c363025fb95b88563b72ac9f9914ba5e04b66d6e6b39591b90fffdd97a5f75"
     const crypto = require('crypto-js')
 
-    useEffect(()=> {
-        const getData = async () => {
-            const data = await getDocs(collection(db, "TIL/"))
-            setItems(
-                data.docs.map((doc) =>{
-                    const dateString = doc.data().date
-                    const date = new Date(dateString.toDate());
-                    const options = { month: 'long', day: 'numeric', year: 'numeric' };
-                    const formattedDate = date.toLocaleDateString('en-US', options);
-                    return { ...doc.data(), id: doc.id, date: formattedDate };
-                }))
-        }
+
+    const getData = async () => {
+        const data = await getDocs(collection(db, "TIL/"))
+        setItems(
+            data.docs.map((doc) =>{
+                const dateString = doc.data().date
+                const date = new Date(dateString.toDate());
+                const options = { month: 'long', day: 'numeric', year: 'numeric' };
+                const formattedDate = date.toLocaleDateString('en-US', options);
+                return { ...doc.data(), id: doc.id, date: formattedDate };
+            }))
+    }
+
+    useEffect(()=> {    
         getData()
     }, [])
 
@@ -40,9 +42,11 @@ export default function TIL() {
         return crypto.SHA256(value).toString()
     }
 
-    //  NEED TO HANDLE WHEN SOMEONE CLICKS LIKE BUTTON
-    const handleLike = (e) => {
-        e.preventDefault()
+    const handleLike = (id, count) => {
+        updateDoc(doc(db, 'TIL/' + id), {
+            liked: parseInt(count)+1
+        })
+        getData()
 
     }
     // ----------------------------------------------
@@ -76,7 +80,8 @@ export default function TIL() {
                 content: formValues.content, 
                 category: formValues.category, 
                 date: time, 
-                liked: 0
+                liked: 0, 
+                source: formValues.source
             })
             setModalOpen(false)
 
@@ -84,6 +89,7 @@ export default function TIL() {
             setTimeout(() => {
                 setShowSubmitted(false);
             }, 2000);
+            getData()
         }
 
     }
@@ -95,10 +101,14 @@ export default function TIL() {
                 <hr/>
                 <p className="text-md my-2 text-center">{data.content}</p>
                 <hr/>
-                <div className="mt-4 justify-between text-xs flex">
-                    <button> 🫰 {data.liked}</button>
+                <div className="mt-4 justify-between text-xs flex text-gray-400">
+                    <button onClick={() => handleLike(data.id, data.liked)}> 🫰 {data.liked}</button>
                     <p>{data.date}</p>
+                    <div className="">
+                        <div className='text-xs text-gray-400'>Source: {data.source ? <i className='text-gray-400'>{data.source}</i> : <i className='text-gray-200'>NA</i>}</div>                    
+                    </div>
                 </div>
+                
             </div>
         )
     }
@@ -159,12 +169,16 @@ export default function TIL() {
                                             </label>
                                             {errors.date && <p className="text-red-400 text-right">{errors.date}</p>}
                                         </div>
+                                        
                                     </div>
                                     <div className='flex flex-col mb-4'>
                                         <label className='text-white my-2'>
                                             <textarea onChange={handleChange} className="p-2 text-black w-full rounded-sm" rows="10" name="content" type="textarea" placeholder="Content 📖"/>  
                                         </label>
                                         {errors.content && <p className="text-red-400">{errors.content}</p>}
+                                        <label className='text-white my-2'>
+                                            <input onChange={handleChange} className="p-2 text-black w-full rounded-sm" name="source" type="text" placeholder="Source 🧬"/>  
+                                        </label>
                                     </div>
                                     <div className="flex flex-row w-full flex-wrap">
                                         <div className="flex flex-col w-full md:w-8/12">
