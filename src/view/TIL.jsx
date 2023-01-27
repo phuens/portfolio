@@ -1,6 +1,7 @@
 import React, { useEffect, useState} from 'react';
 import Modal from '@mui/material/Modal';
 import {collection, doc, getDocs, setDoc, Timestamp, updateDoc} from 'firebase/firestore'
+import {getAuth, signInWithEmailAndPassword} from 'firebase/auth'
 import moment from 'moment'
 
 import db from '../api/firestore'
@@ -11,9 +12,10 @@ export default function TIL() {
     const [items, setItems] = useState([])
     const [formValues, setFormValues] = useState({})
     const [errors, setErrors] = useState({});
+    const [authError, setAuthError] = useState(false)
+    const [authMsg, setAuthMsg] = useState('')
     const [showSubmitted, setShowSubmitted] = useState(false)
-    const hashedPassword = "d4c363025fb95b88563b72ac9f9914ba5e04b66d6e6b39591b90fffdd97a5f75"
-    const crypto = require('crypto-js')
+    const auth = getAuth()
 
 
     const getData = async () => {
@@ -27,19 +29,13 @@ export default function TIL() {
                 return { ...doc.data(), id: doc.id, date: formattedDate };
             }))
     }
-
+   
     useEffect(()=> {    
         getData()
     }, [])
 
-
     const handleChange = (e) => {
         setFormValues({...formValues, [e.target.name]: e.target.value})
-    }
-
-
-    const hash = (value) => {
-        return crypto.SHA256(value).toString()
     }
 
     const handleLike = (id, count) => {
@@ -47,7 +43,19 @@ export default function TIL() {
             liked: parseInt(count)+1
         })
         getData()
+    }
 
+    const submitData = async (data) => {
+        const time = Timestamp.fromDate(new Date( moment(data.date).toDate()))
+        await setDoc(doc(db, 'TIL/' + time), {
+            content: data.content, 
+            category: data.category, 
+            date: time, 
+            liked: 0, 
+            source: data.source
+        })
+        setModalOpen(false)
+        setShowSubmitted(true);
     }
     // ----------------------------------------------
 
@@ -64,34 +72,31 @@ export default function TIL() {
         if (!formValues.content){
             formError.content = "Content is required"
         }
+        if (!formValues.email){
+            formError.email = "Email is required"
+        }
 
         if (!formValues.password){
             formError.password = "Password is required"
         }
 
-        if (hashedPassword !== hash(formValues.password)){
-            formError.password = "Password do not match"
-        } 
         setErrors(formError)
-
-        if (Object.keys(formError).length === 0){ 
-            const time = Timestamp.fromDate(new Date( moment(formValues.date).toDate()))
-            setDoc(doc(db, 'TIL/' + time), {
-                content: formValues.content, 
-                category: formValues.category, 
-                date: time, 
-                liked: 0, 
-                source: formValues.source
-            })
-            setModalOpen(false)
-
-            setShowSubmitted(true);
+        if (Object.keys(formError).length !== 0){return}
+        
+        signInWithEmailAndPassword(auth, formValues.email, formValues.password)
+        .then(() => {
+            submitData(formValues)
             setTimeout(() => {
                 setShowSubmitted(false);
             }, 2000);
             getData()
-        }
-
+            setAuthError(false)
+            setAuthMsg('')
+        })
+        .catch ((error) => {
+            setAuthError(true)
+            setAuthMsg(error.message)
+        })
     }
 
     const Jumbotron = ({data}) => {
@@ -137,18 +142,18 @@ export default function TIL() {
                         aria-labelledby="modal-modal-title"
                         aria-describedby="modal-modal-description"
                     >
-                        <div className="w-12/12 mt-24 flex justify-center ">
+                        <div className="w-12/12 mt-8 md:mt-24 flex justify-center ">
                             <div
-                                className="px-4 py-12 w-11/12 md:w-10/12 md:p-12 rounded-xl"
+                                className="px-4 py-8 md:py-12 w-11/12 md:w-10/12 md:p-12 rounded-xl"
                                 style={{
                                     backgroundColor: '#070911',
                                     boxShadow: '1px 2px 12px -1px rgba(255,255,255,0.66)',
                                 }}
                             >
-                                <p className="text-md text-center mb-20 text-white md:text-2xl">
+                                <p className="text-md text-center mb-16 md:mb-20 text-white md:text-2xl">
                                    
                                     <button
-                                        onClick={() => setModalOpen(false)}
+                                        onClick={() => {setModalOpen(false); setErrors({})}}
                                         style={{
                                             boxShadow:  "1px 1px 1px #000, -1px -1px 3px #090c16"
                                         }}
@@ -164,13 +169,13 @@ export default function TIL() {
                                             <label className='text-white my-2'>
                                                 <input onChange={handleChange} className="p-2 text-black w-full rounded-sm" name="category" type="text" placeholder="Category 📂"/>  
                                             </label>
-                                            {errors.category && <p className="text-red-400">{errors.category}</p>}
+                                            {errors.category && <p className="text-red-500">{errors.category}</p>}
                                         </div>
                                         <div className=" w-full md:w-6/12 flex flex-col">
                                             <label className='text-white my-2'>
                                                 <input onChange={handleChange} className="p-2 float-right text-black w-full md:w-11/12 rounded-sm" name="date" type="date"/>  
                                             </label>
-                                            {errors.date && <p className="text-red-400 text-right">{errors.date}</p>}
+                                            {errors.date && <p className="text-red-500 text-right">{errors.date}</p>}
                                         </div>
                                         
                                     </div>
@@ -178,25 +183,33 @@ export default function TIL() {
                                         <label className='text-white my-2'>
                                             <textarea onChange={handleChange} className="p-2 text-black w-full rounded-sm" rows="10" name="content" type="textarea" placeholder="Content 📖"/>  
                                         </label>
-                                        {errors.content && <p className="text-red-400">{errors.content}</p>}
+                                        {errors.content && <p className="text-red-500">{errors.content}</p>}
                                         <label className='text-white my-2'>
                                             <input onChange={handleChange} className="p-2 text-black w-full rounded-sm" name="source" type="text" placeholder="Source 🧬"/>  
                                         </label>
                                     </div>
-                                    <div className="flex flex-row w-full flex-wrap">
-                                        <div className="flex flex-col w-full md:w-8/12">
-                                            <label className='text-white my-2 w-full md:w-11/12'>
-                                                <input onChange={handleChange} className="p-2 text-black w-full md:w-10/12 rounded-sm" name="password" type="password" placeholder="Password 🔑"/>  
+                                    <div className="flex flex-row flex-wrap w-full">
+                                        <div className="flex flex-wrap w-full md:w-12/12">
+                                            <label className='text-white my-2 w-full md:w-6/12'>
+                                                <input onChange={handleChange} className="p-2 text-black w-full md:w-10/12 rounded-sm" name="email" type="email" placeholder="email 📪"/>  
+                                                {errors.email && <p className="text-red-500">{errors.email}</p>}
                                             </label>
-                                            {errors.password && <p className="text-red-400">{errors.password}</p>}
-                                        </div>
-                                        <div className='py-4 w-full text-center md:w-4/12 md:text-left'>
-                                            <button onClick={(e) => handleSubmit(e)} className="border px-12 md:px-4 rounded-xl text-md text-white hover:rounded-md hover:px-6 transition-all">
-                                                Submit
-                                            </button>
+                                            
+
+                                            <label className='text-white my-2 w-full md:w-4/12'>
+                                                <input onChange={handleChange} className="p-2 text-black w-full md:w-10/12 rounded-sm" name="password" type="password" placeholder="Password 🔑"/>  
+                                                {errors.password && <p className="text-red-500">{errors.password}</p>}
+                                            </label>
+                                           
+                                            
+                                            <div className='py-4 w-full text-center md:w-1/12 md:text-left'>
+                                                <button onClick={(e) => handleSubmit(e)} className="border px-12 md:px-4 rounded-xl text-md text-white hover:rounded-md hover:px-6 transition-all">
+                                                    Submit
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
-                                
+                                    <div className="mt-2 text-red-500"> {authError && <p>Authentication failed. {authMsg}</p>}</div>                              
                                 </form>
 
                             </div>
