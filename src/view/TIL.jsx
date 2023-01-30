@@ -47,12 +47,14 @@ export default function TIL() {
 
     const submitData = async (data) => {
         const time = Timestamp.fromDate(new Date( moment(data.date).toDate()))
+        console.log("===>", data)
         await setDoc(doc(db, 'TIL/' + time), {
             content: data.content, 
             category: data.category, 
             date: time, 
             liked: 0, 
-            source: data.source
+            source: data.source,
+            link: data.link
         })
         setModalOpen(false)
         setShowSubmitted(true);
@@ -79,6 +81,12 @@ export default function TIL() {
         if (!formValues.password){
             formError.password = "Password is required"
         }
+        if (!formValues.source){
+            setFormValues({...formValues, 'source': ''})
+        }
+        if (!formValues.link){
+            setFormValues({...formValues, 'link': '#'})
+        }
 
         setErrors(formError)
         if (Object.keys(formError).length !== 0){return}
@@ -86,6 +94,7 @@ export default function TIL() {
         signInWithEmailAndPassword(auth, formValues.email, formValues.password)
         .then(() => {
             submitData(formValues)
+
             setTimeout(() => {
                 setShowSubmitted(false);
             }, 2000);
@@ -110,7 +119,7 @@ export default function TIL() {
                     <button onClick={() => handleLike(data.id, data.liked)}> 🫰 {data.liked}</button>
                     <p>{data.date}</p>
                     <div className="">
-                        <div className='text-xs text-gray-400'>Source: {data.source ? <i className='text-gray-400'>{data.source}</i> : <i className='text-gray-200'>NA</i>}</div>                    
+                        <div className='text-xs text-gray-400'>Source: {data.source ? <a href={data.link} target="_" className='text-blue-400' aria-disabled={data.link === '#'} role="link" >{data.source}</a> : <i className='text-gray-200'>NA</i>}</div>                    
                     </div>
                 </div>
                 
@@ -187,8 +196,11 @@ export default function TIL() {
                                         <label className='text-white my-2'>
                                             <input onChange={handleChange} className="p-2 text-black w-full rounded-sm" name="source" type="text" placeholder="Source 🧬"/>  
                                         </label>
+                                        <label className='text-white my-2'>
+                                            <input onChange={handleChange} className="p-2 text-black w-full rounded-sm" name="link" type="text" placeholder="Source Link 🔗"/>  
+                                        </label>
                                     </div>
-                                    <div className="flex flex-row flex-wrap w-full">
+                                    <div className="flex flex-row flex-wrap w-full">0
                                         <div className="flex flex-wrap w-full md:w-12/12">
                                             <label className='text-white my-2 w-full md:w-6/12'>
                                                 <input onChange={handleChange} className="p-2 text-black w-full md:w-10/12 rounded-sm" name="email" type="email" placeholder="email 📪"/>  
