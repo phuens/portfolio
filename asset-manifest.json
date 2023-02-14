@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.8549b772.css",
-    "main.js": "/static/js/main.84bf19e9.js",
+    "main.css": "/static/css/main.2c3ee54f.css",
+    "main.js": "/static/js/main.0375b7c3.js",
     "static/js/787.5809834d.chunk.js": "/static/js/787.5809834d.chunk.js",
     "static/media/canada.jpg": "/static/media/canada.39bcd53dec3951a3fa73.jpg",
-    "static/media/educated.jpeg": "/static/media/educated.660901d7648b9b1b6891.jpeg",
     "static/media/2021-book-summary.png": "/static/media/2021-book-summary.97114004ae985a8a210b.png",
-    "static/media/book_of_two_ways.jpg": "/static/media/book_of_two_ways.914d8130d59ef4729362.jpg",
+    "static/media/2022-book-summary.png": "/static/media/2022-book-summary.30122eb081bab204cc99.png",
     "static/media/2020-book-summary.png": "/static/media/2020-book-summary.04dff52aaaaf909e156c.png",
-    "static/media/rich_dad_poor_dad.jpg": "/static/media/rich_dad_poor_dad.e25747ac47787f33f3dc.jpg",
+    "static/media/future_is_asia.jpg": "/static/media/future_is_asia.081c8befaaadb77bba9b.jpg",
+    "static/media/bardo.png": "/static/media/bardo.af27c036c1fb530df9d1.png",
+    "static/media/loader.gif": "/static/media/loader.78330ae49f45f7281180.gif",
     "static/media/wheaton.jpg": "/static/media/wheaton.b97bc728ea2102a4866b.jpg",
-    "static/media/meditations.jpg": "/static/media/meditations.caf040b0bb880c69cb14.jpg",
     "static/media/misc.jpg": "/static/media/misc.3e276435d6e22b9dbb8a.jpg",
     "static/media/watson.png": "/static/media/watson.e7f62affee234aa3fc5c.png",
     "static/media/nepal.jpg": "/static/media/nepal.659987f0944d162471fd.jpg",
@@ -20,22 +20,19 @@
     "static/media/bhutan.jpg": "/static/media/bhutan.f2b9ea42521f9d9925cf.jpg",
     "static/media/headshot.jpg": "/static/media/headshot.3448cd16c798957c6df5.jpg",
     "static/media/mongolia.jpg": "/static/media/mongolia.16c004a0690bf9069c5a.jpg",
-    "static/media/psychology_of_money.jpg": "/static/media/psychology_of_money.e000f96552222949346c.jpg",
-    "static/media/fahrenheit_451.jpg": "/static/media/fahrenheit_451.8505128cbafaa8167c82.jpg",
     "static/media/kenya.jpg": "/static/media/kenya.0ccc8a9d04e2716f23f9.jpg",
     "static/media/zanzibar.jpg": "/static/media/zanzibar.2ef3e5155b288918292d.jpg",
-    "static/media/chatter.jpg": "/static/media/chatter.a9b292a867194a7e610a.jpg",
-    "static/media/numbers_dont_lie.jpg": "/static/media/numbers_dont_lie.f815e316621d8d09fd4b.jpg",
     "static/media/tanzania.jpg": "/static/media/tanzania.69f040cda2162066f9aa.jpg",
+    "static/media/quantum_night.jpg": "/static/media/quantum_night.653a3e26e355d9f4fd28.jpg",
+    "static/media/joy_of_x.jpg": "/static/media/joy_of_x.7c2eaa118d787823bdb1.jpg",
     "static/media/ttpl.png": "/static/media/ttpl.62131c99ad3d75c4db23.png",
-    "static/media/almanack_of_naval.jpg": "/static/media/almanack_of_naval.46c9c8c5392230cdee5b.jpg",
     "index.html": "/index.html",
-    "main.8549b772.css.map": "/static/css/main.8549b772.css.map",
-    "main.84bf19e9.js.map": "/static/js/main.84bf19e9.js.map",
+    "main.2c3ee54f.css.map": "/static/css/main.2c3ee54f.css.map",
+    "main.0375b7c3.js.map": "/static/js/main.0375b7c3.js.map",
     "787.5809834d.chunk.js.map": "/static/js/787.5809834d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8549b772.css",
-    "static/js/main.84bf19e9.js"
+    "static/css/main.2c3ee54f.css",
+    "static/js/main.0375b7c3.js"
   ]
 }
