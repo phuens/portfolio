@@ -1,6 +1,6 @@
 import React, { useEffect, useState} from 'react';
 import Modal from '@mui/material/Modal';
-import {collection, doc, getDocs, setDoc, Timestamp, updateDoc} from 'firebase/firestore'
+import {collection, doc, getDocs, setDoc, Timestamp} from 'firebase/firestore'
 import {getAuth, signInWithEmailAndPassword} from 'firebase/auth'
 import moment from 'moment'
 
@@ -12,6 +12,7 @@ export default function TIL() {
     const [modalOpen, setModalOpen] = useState(false);
     const [items, setItems] = useState([])
     const [formValues, setFormValues] = useState({})
+    const [databaseError, setDatabaseError] = useState(null)
     const [errors, setErrors] = useState({});
     const [authError, setAuthError] = useState(false)
     const [authMsg, setAuthMsg] = useState('')
@@ -20,15 +21,20 @@ export default function TIL() {
 
 
     const getData = async () => {
-        const data = await getDocs(collection(db, "TIL/"))
-        setItems(
-            data.docs.map((doc) =>{
-                const dateString = doc.data().date
-                const date = new Date(dateString.toDate());
-                const options = { month: 'long', day: 'numeric', year: 'numeric' };
-                const formattedDate = date.toLocaleDateString('en-US', options);
-                return { ...doc.data(), id: doc.id, date: formattedDate };
-            }))
+        try {
+            const data = await getDocs(collection(db, "TIL/"))
+            setItems(
+                data.docs.map((doc) =>{
+                    const dateString = doc.data().date
+                    const date = new Date(dateString.toDate());
+                    const options = { month: 'long', day: 'numeric', year: 'numeric' };
+                    const formattedDate = date.toLocaleDateString('en-US', options);
+                    return { ...doc.data(), id: doc.id, date: formattedDate };
+                }))
+        } catch(error){
+            setDatabaseError(error)
+            console.log(error)
+        }
     }
    
     useEffect(()=> {    
@@ -39,12 +45,12 @@ export default function TIL() {
         setFormValues({...formValues, [e.target.name]: e.target.value})
     }
 
-    const handleLike = (id, count) => {
-        updateDoc(doc(db, 'TIL/' + id), {
-            liked: parseInt(count)+1
-        })
-        getData()
-    }
+    // const handleLike = (id, count) => {
+    //     updateDoc(doc(db, 'TIL/' + id), {
+    //         liked: parseInt(count)+1
+    //     })
+    //     getData()
+    // }
 
     const submitData = async (data) => {
         const time = Timestamp.fromDate(new Date( moment(data.date).toDate()))
@@ -110,13 +116,13 @@ export default function TIL() {
 
     const Jumbotron = ({data}) => {
         return (
-            <div className="border h-48 p-4 md:p-4 rounded-xl bg-white text-blue-900">
-                <p className="">{data.category}</p>
+            <div className="border p-4 md:p-4 rounded-xl bg-white text-blue-900">
+                <p className="text-blue-900 mb-4">{data.category}</p>
                 <hr/>
-                <p className="text-md my-2 text-center">{data.content}</p>
+                <p className="text-md my-2 text-indigo-900">{data.content}</p>
                 <hr/>
                 <div className="mt-4 justify-between text-xs flex text-gray-400">
-                    <button onClick={() => handleLike(data.id, data.liked)}> 🫰 {data.liked}</button>
+                    {/* <button onClick={() => handleLike(data.id, data.liked)}> ❤️ {data.liked}</button> */}
                     <p>{data.date}</p>
                     <div className="">
                         <div className='text-xs text-gray-400'>Source: {data.source ? <a href={data.link} target="_" className='text-blue-400' aria-disabled={data.link === '#'}>{data.source}</a> : <i className='text-gray-200'>NA</i>}</div>                    
@@ -130,7 +136,7 @@ export default function TIL() {
     return (
         <>
         <div className="flex flex-col ">
-            {!items.length ? ( 
+            {!items.length & databaseError ? ( 
                 <div>
                     <Loader text="Loading"/>
                 </div>): 
@@ -237,10 +243,17 @@ export default function TIL() {
             )}
     
             <hr className='mt-2 mb-8'/>
+            {databaseError ? 
+                (<div className='m-8 text-2xl text-center'>
+                    Sorry, an error occurred while trying to fetch data!
+                </div>) 
+                : 
+                (<div>
+                    {items.map((item, index) => <div className='w-full md:w-1/3 float-left mb-3' key={index}> <div className='px-2'><Jumbotron data={item} key={index}/></div> </div>)}
+                </div>)
             
-            <div className=''>
-                {items.map((item, index) => <div className='w-full md:w-1/3 float-left mb-3' key={index}> <div className='px-2'><Jumbotron data={item} key={index}/></div> </div>)}
-            </div>
+        }
+            
         </div>
         { showSubmitted && <div className='bottom-8 -right-4 text-white absolute border rounded-bl-md  rounded-tl-md py-4 px-6 md:px-8 bg-white text-sm text-blue-900'> Submitted  🤙</div>}
             

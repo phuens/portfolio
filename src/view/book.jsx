@@ -62,7 +62,7 @@ const Card = ({ data }) => {
                             }}
                         >
                             {book.status === 'Reading' ? (
-                                <p className="text-2xl my-3 text-center text-blue-800">
+                                <p className="text-xl my-6 text-center text-blue-800">
                                     Currently Reading
                                 </p>
                             ) : (
@@ -88,7 +88,7 @@ const Card = ({ data }) => {
                                             : book.genres.map((genre) => (
                                                   <span
                                                       key={book.Name + genre}
-                                                      className="mr-2 px-3 text-gray-700 rounded-2xl"
+                                                      className="mr-2 px-3 text-white rounded-2xl"
                                                       style={{
                                                           background:
                                                               CATEGORY_COLORS[genre.toLowerCase()],

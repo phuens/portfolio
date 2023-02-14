@@ -7,15 +7,19 @@ import PSYCHOLOGYMONEY from '../asset/images/books/psychology_of_money.jpg';
 import NAVAL from '../asset/images/books/almanack_of_naval.jpg';
 import TWOWAYS from '../asset/images/books/book_of_two_ways.jpg';
 import EDUCATED from '../asset/images/books/educated.jpeg';
+import QUANTUM_NIGHT from '../asset/images/books/quantum_night.jpg'
+import JOY_X from '../asset/images/books/joy_of_x.jpg'
+import BARDO from '../asset/images/books/bardo.png'
+import ASIAN_FUTURE from '../asset/images/books/future_is_asia.jpg'
 
 export const CATEGORY_COLORS = {
     _a: '#CD533B',
     _b: '#99D17B',
     _c: '#4ECDC4',
     _d: '#6F73D2',
-    _fe: '#3F826D',
-    _g: '#2E294E',
 
+    scifi: '#3F826D',
+    world: '#2E294E',
     memoir: '#C19875',
     history: '#A0CED9',
     business: '#F6AE2D',
@@ -38,6 +42,38 @@ export const RATINGCOLORS = {
 };
 
 export const BOOKS = [
+    {
+        name: 'The future is Asian ',
+        author: 'Parag Khanna',
+        rating: 5,
+        genres: ['History', 'World'],
+        status: 'Reading',
+        url: ASIAN_FUTURE,
+    },
+    {
+        name: 'In Love With The World',
+        author: 'Yongey Mingyur Rinpoche',
+        rating: 5,
+        genres: ['Memoir'],
+        status: 'Reading',
+        url: BARDO,
+    },
+    {
+        name: 'Quantum Night',
+        author: 'Robert J Sawyer',
+        rating: 3,
+        genres: ['Scifi', 'Fiction'],
+        status: true,
+        url: QUANTUM_NIGHT,
+    },
+    {
+        name: 'The Joy of X',
+        author: 'Steven Strogatz',
+        rating: 3,
+        genres: ['Scifi', 'Fiction'],
+        status: true,
+        url: JOY_X,
+    },
     {
         name: 'Educated',
         author: 'Tara Westover',
