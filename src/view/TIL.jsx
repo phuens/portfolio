@@ -150,7 +150,7 @@ export default function TIL() {
     return (
         <>
             <div className="flex flex-col ">
-                {!items.length & databaseError ? (
+                {!items.length & !databaseError ? (
                     <div>
                         <Loader text="Loading" />
                     </div>
