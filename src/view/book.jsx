@@ -35,13 +35,13 @@ const History = () => {
         <>
             <div className="mt-10">
                 <Year year="2022" />
-                <img src={History2022} alt="book history 2022" />
+                <img src={History2022} alt="book history 2022" className='mb-12'/>
 
                 <Year year="2021" />
-                <img src={History2021} alt="book history 2021" />
+                <img src={History2021} alt="book history 2021" className='mb-12'/>
 
                 <Year year="2020" />
-                <img src={History2020} alt="book history 2020" />
+                <img src={History2020} alt="book history 2020" className='mb-12'/>
             </div>
         </>
     );
