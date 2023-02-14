@@ -1,5 +1,4 @@
 import React from 'react';
-import { RATINGCOLORS, CATEGORY_COLORS, BOOKS } from '../constant/books';
 import { HiStar } from 'react-icons/hi';
 import Box from '@mui/material/Box';
 import Collapse from '@mui/material/Collapse';
@@ -12,16 +11,20 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import { FaGoodreads } from 'react-icons/fa';
 
+import { RATINGCOLORS, CATEGORY_COLORS, BOOKS } from '../constant/books';
+import History2022 from '../asset/images/books/2022-book-summary.png';
 import History2021 from '../asset/images/books/2021-book-summary.png';
 import History2020 from '../asset/images/books/2020-book-summary.png';
 
-const Year = ({ year }) => {
+const Year = (props) => {
     return (
         <div className="mb-10 text-center">
-            <h1 className="mb-4 text-4xl font-bold" style={{ fontFamily: 'Major Mono Display' }}>
-                {year}
-            </h1>
+            <p className="mb-4 text-4xl font-bold" style={{ fontFamily: 'Major Mono Display' }}>
+                {props.year}
+                <span className="text-xs font-sans mx-2">{props.subtext}</span>
+            </p>
             <hr className="border-gray-700" />
         </div>
     );
@@ -31,6 +34,9 @@ const History = () => {
     return (
         <>
             <div className="mt-10">
+                <Year year="2022" />
+                <img src={History2022} alt="book history 2022" />
+
                 <Year year="2021" />
                 <img src={History2021} alt="book history 2021" />
 
@@ -172,19 +178,22 @@ function Row({ row }) {
                                             className="text-center"
                                             style={{ color: 'white', borderBottom: 'none' }}
                                         >
-                                            {Object.keys(row).indexOf('Genres') === -1
-                                                ? ''
-                                                : row.Genres.map((genre) => (
-                                                      <span
-                                                          key={'card' + row.Name + genre}
-                                                          className="mt-1 mr-1 px-2 justify-center text-sm rounded-xl text-white"
-                                                          style={{
-                                                              background: CATEGORY_COLORS[genre],
-                                                          }}
-                                                      >
-                                                          {genre}{' '}
-                                                      </span>
-                                                  ))}
+                                            {/* {Object.keys(row).indexOf('Genres') === -1 ? (
+                                                <p>{Object.keys(row)}</p>
+                                            ) : ( */}
+                                            {row.genres.map((genre) => (
+                                                <span
+                                                    key={'card' + row.Name + genre}
+                                                    className="mt-1 mr-1 px-2 justify-center text-sm rounded-xl text-white"
+                                                    style={{
+                                                        background:
+                                                            CATEGORY_COLORS[genre.toLowerCase()],
+                                                    }}
+                                                >
+                                                    {genre}
+                                                </span>
+                                            ))}
+                                            {/* )} */}
                                         </TableCell>
                                     </TableRow>
                                 </TableHead>
@@ -215,14 +224,23 @@ const MobileCard = () => {
 export default function Book() {
     return (
         <>
+            <div className="text-blue-300 w-full flex flex-row mx-4 mb-4 md:mb-0 md:mx-0">
+                <a
+                    href="https://www.goodreads.com/user/show/33245001-phuntsho-norbu"
+                    target="_"
+                    className="float-left"
+                >
+                    Goodreads <FaGoodreads className="inline" />
+                </a>
+            </div>
             <div className="w-12/12 hidden md:block">
-                <Year year="2022" />
+                <Year year="2023" subtext="2/12 books" />
                 <Card data={BOOKS} />
                 <History />
             </div>
 
             <div className="w-12/12 mx-4 block md:hidden lg:hidden">
-                <Year year="2022" />
+                <Year year="2023" subtext="2/12 books" />
                 <MobileCard />
                 <History />
             </div>
