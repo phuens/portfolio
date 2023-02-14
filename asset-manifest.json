@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2c3ee54f.css",
-    "main.js": "/static/js/main.0375b7c3.js",
+    "main.css": "/static/css/main.1bc487b1.css",
+    "main.js": "/static/js/main.d8a7d30b.js",
     "static/js/787.5809834d.chunk.js": "/static/js/787.5809834d.chunk.js",
     "static/media/canada.jpg": "/static/media/canada.39bcd53dec3951a3fa73.jpg",
     "static/media/2021-book-summary.png": "/static/media/2021-book-summary.97114004ae985a8a210b.png",
@@ -27,12 +27,12 @@
     "static/media/joy_of_x.jpg": "/static/media/joy_of_x.7c2eaa118d787823bdb1.jpg",
     "static/media/ttpl.png": "/static/media/ttpl.62131c99ad3d75c4db23.png",
     "index.html": "/index.html",
-    "main.2c3ee54f.css.map": "/static/css/main.2c3ee54f.css.map",
-    "main.0375b7c3.js.map": "/static/js/main.0375b7c3.js.map",
+    "main.1bc487b1.css.map": "/static/css/main.1bc487b1.css.map",
+    "main.d8a7d30b.js.map": "/static/js/main.d8a7d30b.js.map",
     "787.5809834d.chunk.js.map": "/static/js/787.5809834d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c3ee54f.css",
-    "static/js/main.0375b7c3.js"
+    "static/css/main.1bc487b1.css",
+    "static/js/main.d8a7d30b.js"
   ]
 }
