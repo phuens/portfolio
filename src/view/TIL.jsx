@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Modal from '@mui/material/Modal';
-import { collection, doc, getDocs, setDoc, Timestamp } from 'firebase/firestore';
+import { collection, doc, getDocs, setDoc, Timestamp, query, orderBy } from 'firebase/firestore';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import moment from 'moment';
 
@@ -20,7 +20,8 @@ export default function TIL() {
 
     const getData = async () => {
         try {
-            const data = await getDocs(collection(db, 'TIL/'));
+            const dataRef = collection(db, 'TIL/')
+            const data = await getDocs(query(dataRef, orderBy("date", "desc")));
             setItems(
                 data.docs.map((doc) => {
                     const dateString = doc.data().date;
