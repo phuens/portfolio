@@ -54,7 +54,8 @@ export default function TIL() {
 
     const submitData = async (data) => {
         const time = Timestamp.fromDate(new Date(moment(data.date).toDate()));
-        await setDoc(doc(db, 'TIL/' + time), {
+        const docname = time+ "__"+ String(Math.floor(Math.random()*1000))
+        await setDoc(doc(db, 'TIL/' + docname), {
             content: data.content,
             category: data.category,
             date: time,
