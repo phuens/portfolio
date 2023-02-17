@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.1bc487b1.css",
-    "main.js": "/static/js/main.b0267b4c.js",
+    "main.js": "/static/js/main.ca029cc7.js",
     "static/js/787.5809834d.chunk.js": "/static/js/787.5809834d.chunk.js",
     "static/media/2021-book-summary.png": "/static/media/2021-book-summary.97114004ae985a8a210b.png",
     "static/media/2022-book-summary.png": "/static/media/2022-book-summary.30122eb081bab204cc99.png",
@@ -28,11 +28,11 @@
     "static/media/headshot.jpg": "/static/media/headshot.512b62ae16ae6e809588.jpg",
     "index.html": "/index.html",
     "main.1bc487b1.css.map": "/static/css/main.1bc487b1.css.map",
-    "main.b0267b4c.js.map": "/static/js/main.b0267b4c.js.map",
+    "main.ca029cc7.js.map": "/static/js/main.ca029cc7.js.map",
     "787.5809834d.chunk.js.map": "/static/js/787.5809834d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1bc487b1.css",
-    "static/js/main.b0267b4c.js"
+    "static/js/main.ca029cc7.js"
   ]
 }
