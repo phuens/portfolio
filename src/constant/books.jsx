@@ -6,8 +6,8 @@ import ASIAN_FUTURE from '../asset/images/books/future_is_asia.jpg';
 export const CATEGORY_COLORS = {
     _a: '#CD533B',
     _b: '#99D17B',
-    _c: '#4ECDC4',
 
+    spirituality: '#4ECDC4',
     mathematics: '#6F73D2',
     scifi: '#3F826D',
     world: '#2E294E',
@@ -43,8 +43,9 @@ export const BOOKS = [
     {
         name: 'In Love With The World',
         author: 'Yongey Mingyur Rinpoche',
-        genres: ['Memoir'],
-        status: 'Reading',
+        rating: 3,
+        genres: ['Memoir', 'Spirituality'],
+        status: 'true',
         url: BARDO,
     },
     {
