@@ -2,6 +2,7 @@ import QUANTUM_NIGHT from '../asset/images/books/quantum_night.jpg';
 import JOY_X from '../asset/images/books/joy_of_x.jpg';
 import BARDO from '../asset/images/books/bardo.png';
 import ASIAN_FUTURE from '../asset/images/books/future_is_asia.jpg';
+import ON_EARTH from '../asset/images/books/on_earth.jpeg';
 
 export const CATEGORY_COLORS = {
     _a: '#CD533B',
@@ -33,6 +34,13 @@ export const RATINGCOLORS = {
 };
 
 export const BOOKS = [
+    {
+        name: "On Earth We're Briefly Gorgeous Novel",
+        author: 'Ocean Vuong',
+        genres: ['Fiction'],
+        status: 'Reading',
+        url: ON_EARTH,
+    },
     {
         name: 'The future is Asian ',
         author: 'Parag Khanna',

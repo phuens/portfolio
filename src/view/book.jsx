@@ -35,13 +35,13 @@ const History = () => {
         <>
             <div className="mt-10">
                 <Year year="2022" />
-                <img src={History2022} alt="book history 2022" className='mb-12'/>
+                <img src={History2022} alt="book history 2022" className="mb-12" />
 
                 <Year year="2021" />
-                <img src={History2021} alt="book history 2021" className='mb-12'/>
+                <img src={History2021} alt="book history 2021" className="mb-12" />
 
                 <Year year="2020" />
-                <img src={History2020} alt="book history 2020" className='mb-12'/>
+                <img src={History2020} alt="book history 2020" className="mb-12" />
             </div>
         </>
     );
@@ -222,6 +222,8 @@ const MobileCard = () => {
 };
 
 export default function Book() {
+    const FINISHED = '3/12 books';
+
     return (
         <>
             <div className="text-blue-300 w-full flex flex-row mx-4 mb-4 md:mb-0 md:mx-0">
@@ -234,13 +236,13 @@ export default function Book() {
                 </a>
             </div>
             <div className="w-12/12 hidden md:block">
-                <Year year="2023" subtext="2/12 books" />
+                <Year year="2023" subtext={FINISHED} />
                 <Card data={BOOKS} />
                 <History />
             </div>
 
             <div className="w-12/12 mx-4 block md:hidden lg:hidden">
-                <Year year="2023" subtext="2/12 books" />
+                <Year year="2023" subtext={FINISHED} />
                 <MobileCard />
                 <History />
             </div>
