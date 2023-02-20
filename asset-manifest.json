@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.1bc487b1.css",
-    "main.js": "/static/js/main.5f34d5d1.js",
+    "main.js": "/static/js/main.f144e994.js",
     "static/js/787.5809834d.chunk.js": "/static/js/787.5809834d.chunk.js",
     "static/media/2021-book-summary.png": "/static/media/2021-book-summary.97114004ae985a8a210b.png",
     "static/media/2022-book-summary.png": "/static/media/2022-book-summary.30122eb081bab204cc99.png",
@@ -20,6 +20,7 @@
     "static/media/kenya.jpg": "/static/media/kenya.0ccc8a9d04e2716f23f9.jpg",
     "static/media/zanzibar.jpg": "/static/media/zanzibar.2ef3e5155b288918292d.jpg",
     "static/media/tanzania.jpg": "/static/media/tanzania.69f040cda2162066f9aa.jpg",
+    "static/media/on_earth.jpeg": "/static/media/on_earth.fbd2de7cfdd6413a51cc.jpeg",
     "static/media/quantum_night.jpg": "/static/media/quantum_night.653a3e26e355d9f4fd28.jpg",
     "static/media/joy_of_x.jpg": "/static/media/joy_of_x.7c2eaa118d787823bdb1.jpg",
     "static/media/usask.png": "/static/media/usask.80ec65e35dfddb837f5d.png",
@@ -28,11 +29,11 @@
     "static/media/headshot.jpg": "/static/media/headshot.512b62ae16ae6e809588.jpg",
     "index.html": "/index.html",
     "main.1bc487b1.css.map": "/static/css/main.1bc487b1.css.map",
-    "main.5f34d5d1.js.map": "/static/js/main.5f34d5d1.js.map",
+    "main.f144e994.js.map": "/static/js/main.f144e994.js.map",
     "787.5809834d.chunk.js.map": "/static/js/787.5809834d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1bc487b1.css",
-    "static/js/main.5f34d5d1.js"
+    "static/js/main.f144e994.js"
   ]
 }
