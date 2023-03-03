@@ -35,18 +35,19 @@ export const RATINGCOLORS = {
 
 export const BOOKS = [
     {
-        name: "On Earth We're Briefly Gorgeous Novel",
-        author: 'Ocean Vuong',
-        genres: ['Fiction'],
-        status: 'Reading',
-        url: ON_EARTH,
-    },
-    {
         name: 'The future is Asian ',
         author: 'Parag Khanna',
         genres: ['History', 'World'],
         status: 'Reading',
         url: ASIAN_FUTURE,
+    },
+    {
+        name: "On Earth We're Briefly Gorgeous Novel",
+        author: 'Ocean Vuong',
+        rating: 4,
+        genres: ['Fiction'],
+        status: true,
+        url: ON_EARTH,
     },
     {
         name: 'In Love With The World',
