@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.1bc487b1.css",
-    "main.js": "/static/js/main.9c3a9dfd.js",
+    "main.js": "/static/js/main.80c43f16.js",
     "static/js/787.5809834d.chunk.js": "/static/js/787.5809834d.chunk.js",
+    "static/media/siddhartha.jpeg": "/static/media/siddhartha.bc3efb185801c94e6d79.jpeg",
     "static/media/2021-book-summary.png": "/static/media/2021-book-summary.97114004ae985a8a210b.png",
     "static/media/2022-book-summary.png": "/static/media/2022-book-summary.30122eb081bab204cc99.png",
     "static/media/2020-book-summary.png": "/static/media/2020-book-summary.04dff52aaaaf909e156c.png",
@@ -15,6 +16,7 @@
     "static/media/nepal.jpg": "/static/media/nepal.659987f0944d162471fd.jpg",
     "static/media/mauritius.jpg": "/static/media/mauritius.c5768220435bda9284f9.jpg",
     "static/media/rwanda.jpg": "/static/media/rwanda.79357b448ca43259d5c9.jpg",
+    "static/media/flash_boys.jpeg": "/static/media/flash_boys.1854d97150dad1b07eae.jpeg",
     "static/media/bhutan.jpg": "/static/media/bhutan.f2b9ea42521f9d9925cf.jpg",
     "static/media/mongolia.jpg": "/static/media/mongolia.16c004a0690bf9069c5a.jpg",
     "static/media/kenya.jpg": "/static/media/kenya.0ccc8a9d04e2716f23f9.jpg",
@@ -29,11 +31,11 @@
     "static/media/headshot.jpg": "/static/media/headshot.512b62ae16ae6e809588.jpg",
     "index.html": "/index.html",
     "main.1bc487b1.css.map": "/static/css/main.1bc487b1.css.map",
-    "main.9c3a9dfd.js.map": "/static/js/main.9c3a9dfd.js.map",
+    "main.80c43f16.js.map": "/static/js/main.80c43f16.js.map",
     "787.5809834d.chunk.js.map": "/static/js/787.5809834d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1bc487b1.css",
-    "static/js/main.9c3a9dfd.js"
+    "static/js/main.80c43f16.js"
   ]
 }
