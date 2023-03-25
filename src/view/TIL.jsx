@@ -20,8 +20,8 @@ export default function TIL() {
 
     const getData = async () => {
         try {
-            const dataRef = collection(db, 'TIL/')
-            const data = await getDocs(query(dataRef, orderBy("date", "desc")));
+            const dataRef = collection(db, 'TIL/');
+            const data = await getDocs(query(dataRef, orderBy('date', 'desc')));
             setItems(
                 data.docs.map((doc) => {
                     const dateString = doc.data().date;
@@ -54,7 +54,7 @@ export default function TIL() {
 
     const submitData = async (data) => {
         const time = Timestamp.fromDate(new Date(moment(data.date).toDate()));
-        const docname = time+ "__"+ String(Math.floor(Math.random()*1000))
+        const docname = time + '__' + String(Math.floor(Math.random() * 1000));
         await setDoc(doc(db, 'TIL/' + docname), {
             content: data.content,
             category: data.category,
