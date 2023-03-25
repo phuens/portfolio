@@ -3,6 +3,8 @@ import JOY_X from '../asset/images/books/joy_of_x.jpg';
 import BARDO from '../asset/images/books/bardo.png';
 import ASIAN_FUTURE from '../asset/images/books/future_is_asia.jpg';
 import ON_EARTH from '../asset/images/books/on_earth.jpeg';
+import FLASH_BOYS from '../asset/images/books/flash_boys.jpeg';
+import SIDDHARTA from '../asset/images/books/siddhartha.jpeg';
 
 export const CATEGORY_COLORS = {
     _a: '#CD533B',
@@ -40,6 +42,21 @@ export const BOOKS = [
         genres: ['History', 'World'],
         status: 'Reading',
         url: ASIAN_FUTURE,
+    },
+    {
+        name: 'Siddhartha',
+        author: 'Hermann Hesse',
+        genres: ['Philosopohy', 'Life', 'Fiction'],
+        status: 'Reading',
+        url: SIDDHARTA,
+    },
+    {
+        name: 'Flash Boys: A Wall Street Revolt',
+        author: 'Michael Lewis',
+        rating: 4,
+        genres: ['Technology', 'Finance'],
+        status: true,
+        url: FLASH_BOYS,
     },
     {
         name: "On Earth We're Briefly Gorgeous Novel",
