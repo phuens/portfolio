@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.1bc487b1.css",
-    "main.js": "/static/js/main.b33e31c4.js",
+    "main.css": "/static/css/main.3f305fe3.css",
+    "main.js": "/static/js/main.df04c277.js",
     "static/js/787.5809834d.chunk.js": "/static/js/787.5809834d.chunk.js",
-    "static/media/siddhartha.jpeg": "/static/media/siddhartha.bc3efb185801c94e6d79.jpeg",
     "static/media/2021-book-summary.png": "/static/media/2021-book-summary.97114004ae985a8a210b.png",
     "static/media/2022-book-summary.png": "/static/media/2022-book-summary.30122eb081bab204cc99.png",
     "static/media/2020-book-summary.png": "/static/media/2020-book-summary.04dff52aaaaf909e156c.png",
-    "static/media/future_is_asia.jpg": "/static/media/future_is_asia.081c8befaaadb77bba9b.jpg",
-    "static/media/bardo.png": "/static/media/bardo.af27c036c1fb530df9d1.png",
     "static/media/canada.jpg": "/static/media/canada.10117c4558de0f94cfee.jpg",
     "static/media/loader.gif": "/static/media/loader.78330ae49f45f7281180.gif",
     "static/media/wheaton.jpg": "/static/media/wheaton.b97bc728ea2102a4866b.jpg",
     "static/media/misc.jpg": "/static/media/misc.3e276435d6e22b9dbb8a.jpg",
+    "static/media/siddhartha.jpeg": "/static/media/siddhartha.3be4712d123c3ee91998.jpeg",
+    "static/media/future_is_asia.jpg": "/static/media/future_is_asia.dd13aaa27afee0bc1d60.jpg",
     "static/media/nepal.jpg": "/static/media/nepal.659987f0944d162471fd.jpg",
+    "static/media/bardo.png": "/static/media/bardo.1574bc735a814feaaf65.png",
     "static/media/mauritius.jpg": "/static/media/mauritius.c5768220435bda9284f9.jpg",
     "static/media/rwanda.jpg": "/static/media/rwanda.79357b448ca43259d5c9.jpg",
     "static/media/flash_boys.jpeg": "/static/media/flash_boys.1854d97150dad1b07eae.jpeg",
@@ -30,12 +30,12 @@
     "static/media/watson.png": "/static/media/watson.922324ea7a28f3096884.png",
     "static/media/headshot.jpg": "/static/media/headshot.512b62ae16ae6e809588.jpg",
     "index.html": "/index.html",
-    "main.1bc487b1.css.map": "/static/css/main.1bc487b1.css.map",
-    "main.b33e31c4.js.map": "/static/js/main.b33e31c4.js.map",
+    "main.3f305fe3.css.map": "/static/css/main.3f305fe3.css.map",
+    "main.df04c277.js.map": "/static/js/main.df04c277.js.map",
     "787.5809834d.chunk.js.map": "/static/js/787.5809834d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1bc487b1.css",
-    "static/js/main.b33e31c4.js"
+    "static/css/main.3f305fe3.css",
+    "static/js/main.df04c277.js"
   ]
 }
