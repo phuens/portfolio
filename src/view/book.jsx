@@ -23,7 +23,6 @@ const Year = (props) => {
         <div className="mb-10 text-center">
             <p className="mb-4 text-4xl font-bold" style={{ fontFamily: 'Major Mono Display' }}>
                 {props.year}
-                <span className="text-xs font-sans mx-2">{props.subtext}</span>
             </p>
             <hr className="border-gray-700" />
         </div>
@@ -236,13 +235,13 @@ export default function Book() {
                 </a>
             </div>
             <div className="w-12/12 hidden md:block">
-                <Year year="2023" subtext={FINISHED} />
+                <Year year="2023" />
                 <Card data={BOOKS} />
                 <History />
             </div>
 
             <div className="w-12/12 mx-4 block md:hidden lg:hidden">
-                <Year year="2023" subtext={FINISHED} />
+                <Year year="2023" />
                 <MobileCard />
                 <History />
             </div>
