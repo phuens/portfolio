@@ -46,8 +46,9 @@ export const BOOKS = [
     {
         name: 'Siddhartha',
         author: 'Hermann Hesse',
-        genres: ['Philosopohy', 'Life', 'Fiction'],
-        status: 'Reading',
+        genres: ['Philosophy', 'Life', 'Fiction'],
+        status: true,
+        rating: 5,
         url: SIDDHARTA,
     },
     {
