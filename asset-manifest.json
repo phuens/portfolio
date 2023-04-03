@@ -1,11 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.3f305fe3.css",
-    "main.js": "/static/js/main.df04c277.js",
+    "main.css": "/static/css/main.a899f5ce.css",
+    "main.js": "/static/js/main.22362f9d.js",
     "static/js/787.5809834d.chunk.js": "/static/js/787.5809834d.chunk.js",
-    "static/media/2021-book-summary.png": "/static/media/2021-book-summary.97114004ae985a8a210b.png",
-    "static/media/2022-book-summary.png": "/static/media/2022-book-summary.30122eb081bab204cc99.png",
-    "static/media/2020-book-summary.png": "/static/media/2020-book-summary.04dff52aaaaf909e156c.png",
     "static/media/canada.jpg": "/static/media/canada.10117c4558de0f94cfee.jpg",
     "static/media/loader.gif": "/static/media/loader.78330ae49f45f7281180.gif",
     "static/media/wheaton.jpg": "/static/media/wheaton.b97bc728ea2102a4866b.jpg",
@@ -30,12 +27,12 @@
     "static/media/watson.png": "/static/media/watson.922324ea7a28f3096884.png",
     "static/media/headshot.jpg": "/static/media/headshot.512b62ae16ae6e809588.jpg",
     "index.html": "/index.html",
-    "main.3f305fe3.css.map": "/static/css/main.3f305fe3.css.map",
-    "main.df04c277.js.map": "/static/js/main.df04c277.js.map",
+    "main.a899f5ce.css.map": "/static/css/main.a899f5ce.css.map",
+    "main.22362f9d.js.map": "/static/js/main.22362f9d.js.map",
     "787.5809834d.chunk.js.map": "/static/js/787.5809834d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3f305fe3.css",
-    "static/js/main.df04c277.js"
+    "static/css/main.a899f5ce.css",
+    "static/js/main.22362f9d.js"
   ]
 }
