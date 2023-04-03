@@ -14,9 +14,6 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { FaGoodreads } from 'react-icons/fa';
 
 import { RATINGCOLORS, CATEGORY_COLORS, BOOKS } from '../constant/books';
-import History2022 from '../asset/images/books/2022-book-summary.png';
-import History2021 from '../asset/images/books/2021-book-summary.png';
-import History2020 from '../asset/images/books/2020-book-summary.png';
 
 const Year = (props) => {
     return (
@@ -26,23 +23,6 @@ const Year = (props) => {
             </p>
             <hr className="border-gray-700" />
         </div>
-    );
-};
-
-const History = () => {
-    return (
-        <>
-            <div className="mt-10">
-                <Year year="2022" />
-                <img src={History2022} alt="book history 2022" className="mb-12" />
-
-                <Year year="2021" />
-                <img src={History2021} alt="book history 2021" className="mb-12" />
-
-                <Year year="2020" />
-                <img src={History2020} alt="book history 2020" className="mb-12" />
-            </div>
-        </>
     );
 };
 
@@ -121,10 +101,12 @@ function Row({ row }) {
         <React.Fragment>
             <TableRow className="flex" sx={{ '& > *': { borderBottom: 'None' } }}>
                 <TableCell
-                    className=" w-4 flex content-center"
-                    style={{ borderBottom: 'solid 1px #2a2a2a80' }}
-                >
-                    <img className="w-12/12 rounded-md" src={`${row.url}`} alt="book" />
+                 component="th"
+                 scope="row"
+                 style={{ color: 'white', borderBottom: 'solid 1px #2a2a2a80' }}
+                >   
+                    <img className="w-12/12" src={`${row.url}`} alt={row.name}/>
+                    
                 </TableCell>
                 <TableCell
                     component="th"
@@ -139,10 +121,10 @@ function Row({ row }) {
                     style={{ color: 'white', borderBottom: 'solid 1px #2a2a2a80' }}
                 >
                     <div
-                        className="rounded-xl px-2"
+                        className="rounded-xl px-2 text-xs"
                         style={{ backgroundColor: RATINGCOLORS[row.Rating] }}
                     >
-                        {row.rating ? `${row.rating}/5` : 'Currently Reading'}
+                        {row.rating ? `${row.rating}/5` : 'Reading'}
                     </div>
                 </TableCell>
                 <TableCell
@@ -221,8 +203,6 @@ const MobileCard = () => {
 };
 
 export default function Book() {
-    const FINISHED = '3/12 books';
-
     return (
         <>
             <div className="text-blue-300 w-full flex flex-row mx-4 mb-4 md:mb-0 md:mx-0">
@@ -237,13 +217,13 @@ export default function Book() {
             <div className="w-12/12 hidden md:block">
                 <Year year="2023" />
                 <Card data={BOOKS} />
-                <History />
+                <div className='mb-60'/>
             </div>
 
             <div className="w-12/12 mx-4 block md:hidden lg:hidden">
                 <Year year="2023" />
                 <MobileCard />
-                <History />
+                <div className='mb-48'/>
             </div>
         </>
     );
