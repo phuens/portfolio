@@ -19,7 +19,7 @@ export default function Homepage() {
 
     return (
         <div className="w-screen" style={{ backgroundColor: '#111828' }}>
-            <Navbar tabChange={tabChange} />
+            <Navbar tabChange={tabChange} active={activeTab}/>
             <div className="flex flex-col">
                 <div className={style.mainContent}>
                     {(() => {
