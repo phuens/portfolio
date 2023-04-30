@@ -10,6 +10,7 @@ import db from '../api/firestore';
 export default function TIL() {
     const [modalOpen, setModalOpen] = useState(false);
     const [items, setItems] = useState([]);
+    const [splitData, setSplitData] = useState([]);
     const [formValues, setFormValues] = useState({});
     const [databaseError, setDatabaseError] = useState(null);
     const [errors, setErrors] = useState({});
@@ -30,7 +31,7 @@ export default function TIL() {
                     const formattedDate = date.toLocaleDateString('en-US', options);
                     return { ...doc.data(), id: doc.id, date: formattedDate };
                 })
-            );
+            )      
         } catch (error) {
             setDatabaseError(error);
             console.log(error);
@@ -40,6 +41,10 @@ export default function TIL() {
     useEffect(() => {
         getData();
     }, []);
+
+    useEffect(() => {
+        partitionData(items);
+    }, [items]);
 
     const handleChange = (e) => {
         setFormValues({ ...formValues, [e.target.name]: e.target.value });
@@ -116,6 +121,20 @@ export default function TIL() {
                 setAuthMsg(error.message);
             });
     };
+
+    const partitionData = (data) => { 
+        console.log("data received: ", data)
+        const length    = data.length
+        const parts     = [[], [], []];
+
+        for (let i = 0; i < length; i += 1) {
+            const index = i % 3
+            parts[index].push(data[i]);
+        }
+        
+        setSplitData(parts)
+    }
+
 
     const Jumbotron = ({ data }) => {
         return (
@@ -329,17 +348,37 @@ export default function TIL() {
                     <div className="m-8 text-2xl text-center">
                         Sorry, an error occurred while trying to fetch data!
                     </div>
-                ) : (
-                    <div>
-                        {items.map((item, index) => (
-                            <div className="w-full md:w-1/3 float-left mb-3" key={index}>
-                                {' '}
-                                <div className="px-2">
-                                    <Jumbotron data={item} key={index} />
-                                </div>{' '}
-                            </div>
-                        ))}
-                    </div>
+                ) : (splitData.length > 0 && (
+                        <div className='flex md:flex-row flex-col'>
+                          <div className="w-full md:w-1/3 ">
+                            {splitData[0].map((item, index) => (
+                              <div className="flex mb-3" key={index}>
+                                <div className="px-2 w-full">
+                                  <Jumbotron data={item} key={index} />
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                          <div className="w-full md:w-1/3 ">
+                            {splitData[1].map((item, index) => (
+                              <div className="flex mb-3" key={1+index+splitData[0].length}>
+                                <div className="px-2 w-full">
+                                  <Jumbotron data={item} key={1+index+splitData[0].length} />
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                          <div className="w-full md:w-1/3 ">
+                            {splitData[2].map((item, index) => (
+                              <div className="flex mb-3" key={1+index+splitData[0].length+splitData[1].length}>
+                                <div className="px-2 w-full">
+                                  <Jumbotron data={item} key={1+index+splitData[0].length+splitData[1].length} />
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )
                 )}
             </div>
             {showSubmitted && (
