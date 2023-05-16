@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.b3456274.css",
-    "main.js": "/static/js/main.81d25bf5.js",
+    "main.js": "/static/js/main.112fe9d7.js",
     "static/js/787.5809834d.chunk.js": "/static/js/787.5809834d.chunk.js",
     "static/media/canada.jpg": "/static/media/canada.10117c4558de0f94cfee.jpg",
+    "static/media/stories_of_your_life.jpg": "/static/media/stories_of_your_life.be7557641c346c8d209e.jpg",
     "static/media/loader.gif": "/static/media/loader.78330ae49f45f7281180.gif",
     "static/media/wheaton.jpg": "/static/media/wheaton.b97bc728ea2102a4866b.jpg",
     "static/media/misc.jpg": "/static/media/misc.3e276435d6e22b9dbb8a.jpg",
@@ -28,11 +29,11 @@
     "static/media/headshot.jpg": "/static/media/headshot.512b62ae16ae6e809588.jpg",
     "index.html": "/index.html",
     "main.b3456274.css.map": "/static/css/main.b3456274.css.map",
-    "main.81d25bf5.js.map": "/static/js/main.81d25bf5.js.map",
+    "main.112fe9d7.js.map": "/static/js/main.112fe9d7.js.map",
     "787.5809834d.chunk.js.map": "/static/js/787.5809834d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b3456274.css",
-    "static/js/main.81d25bf5.js"
+    "static/js/main.112fe9d7.js"
   ]
 }
