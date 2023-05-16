@@ -5,6 +5,7 @@ import ASIAN_FUTURE from '../asset/images/books/future_is_asia.jpg';
 import ON_EARTH from '../asset/images/books/on_earth.jpeg';
 import FLASH_BOYS from '../asset/images/books/flash_boys.jpeg';
 import SIDDHARTA from '../asset/images/books/siddhartha.jpeg';
+import TED_CHIANG from '../asset/images/books/stories_of_your_life.jpg'
 
 export const CATEGORY_COLORS = {
     _a: '#CD533B',
@@ -36,12 +37,21 @@ export const RATINGCOLORS = {
 };
 
 export const BOOKS = [
+    
     {
         name: 'The future is Asian ',
         author: 'Parag Khanna',
         genres: ['History', 'World'],
         status: 'Reading',
         url: ASIAN_FUTURE,
+    },
+    {
+        name: 'Stories of your life and others',
+        author: 'Ted Chiang',
+        genres: ['Fiction', 'Scifi'],
+        status: true,
+        rating: 5,
+        url: TED_CHIANG,
     },
     {
         name: 'Siddhartha',
