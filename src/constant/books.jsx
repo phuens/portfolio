@@ -59,6 +59,7 @@ export const BOOKS = [
         author: 'Gabriel Garcia Marquez',
         genres: ['Fiction', 'MagicalRealism'],
         status: true,
+        rating: 4,
         url: HUNDRED_YEARS,
     },
     {
