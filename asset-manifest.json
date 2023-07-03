@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b3456274.css",
-    "main.js": "/static/js/main.112fe9d7.js",
+    "main.js": "/static/js/main.f443c92a.js",
     "static/js/787.5809834d.chunk.js": "/static/js/787.5809834d.chunk.js",
     "static/media/canada.jpg": "/static/media/canada.10117c4558de0f94cfee.jpg",
     "static/media/stories_of_your_life.jpg": "/static/media/stories_of_your_life.be7557641c346c8d209e.jpg",
@@ -26,14 +26,16 @@
     "static/media/usask.png": "/static/media/usask.80ec65e35dfddb837f5d.png",
     "static/media/ttpl.png": "/static/media/ttpl.62131c99ad3d75c4db23.png",
     "static/media/watson.png": "/static/media/watson.922324ea7a28f3096884.png",
+    "static/media/debt_5000_years.jpg": "/static/media/debt_5000_years.0a7ae1d96a485341ba0a.jpg",
     "static/media/headshot.jpg": "/static/media/headshot.512b62ae16ae6e809588.jpg",
+    "static/media/100_years_of_solitude.jpg": "/static/media/100_years_of_solitude.7a1c21b2471360c2396d.jpg",
     "index.html": "/index.html",
     "main.b3456274.css.map": "/static/css/main.b3456274.css.map",
-    "main.112fe9d7.js.map": "/static/js/main.112fe9d7.js.map",
+    "main.f443c92a.js.map": "/static/js/main.f443c92a.js.map",
     "787.5809834d.chunk.js.map": "/static/js/787.5809834d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b3456274.css",
-    "static/js/main.112fe9d7.js"
+    "static/js/main.f443c92a.js"
   ]
 }
