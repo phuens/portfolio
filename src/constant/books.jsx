@@ -5,12 +5,14 @@ import ASIAN_FUTURE from '../asset/images/books/future_is_asia.jpg';
 import ON_EARTH from '../asset/images/books/on_earth.jpeg';
 import FLASH_BOYS from '../asset/images/books/flash_boys.jpeg';
 import SIDDHARTA from '../asset/images/books/siddhartha.jpeg';
-import TED_CHIANG from '../asset/images/books/stories_of_your_life.jpg'
+import TED_CHIANG from '../asset/images/books/stories_of_your_life.jpg';
+import HUNDRED_YEARS from '../asset/images/books/100_years_of_solitude.jpg';
+import DEBT from '../asset/images/books/debt_5000_years.jpg'
 
 export const CATEGORY_COLORS = {
     _a: '#CD533B',
-    _b: '#99D17B',
 
+    magicalrealism: '#99D17B',
     spirituality: '#4ECDC4',
     mathematics: '#6F73D2',
     scifi: '#3F826D',
@@ -39,11 +41,25 @@ export const RATINGCOLORS = {
 export const BOOKS = [
     
     {
+        name: 'Debt: The First 5,000 Years',
+        author: 'David Graeber',
+        genres: ['History', 'Economics'],
+        status: 'Reading',
+        url: DEBT,
+    },
+    {
         name: 'The future is Asian ',
         author: 'Parag Khanna',
         genres: ['History', 'World'],
         status: 'Reading',
         url: ASIAN_FUTURE,
+    },
+    {
+        name: 'One hundred Years of Solitude',
+        author: 'Gabriel Garcia Marquez',
+        genres: ['Fiction', 'MagicalRealism'],
+        status: true,
+        url: HUNDRED_YEARS,
     },
     {
         name: 'Stories of your life and others',
