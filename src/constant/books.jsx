@@ -9,7 +9,7 @@ import TED_CHIANG from '../asset/images/books/stories_of_your_life.jpg';
 import HUNDRED_YEARS from '../asset/images/books/100_years_of_solitude.jpg';
 import DEBT from '../asset/images/books/debt_5000_years.jpg'
 import CHE from '../asset/images/books/che.jpg'
-
+import METAMORPHOSIS from '../asset/images/books/metamorphosis.jpg'
 
 export const CATEGORY_COLORS = {
     _a: '#CD533B',
@@ -55,6 +55,14 @@ export const BOOKS = [
         genres: ['History', 'World'],
         status: 'Reading',
         url: ASIAN_FUTURE,
+    },
+    {
+        name: 'The Metamorphosis ',
+        author: 'Franz Kafka',
+        genres: ['Fiction'],
+        status: true,
+        rating: 4,
+        url: METAMORPHOSIS,
     },
     {
         name: 'Che: The Diaries Of Ernesto Che Guevara',
