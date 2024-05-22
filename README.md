@@ -12,3 +12,13 @@ Tech stacks used: **React JS, Heroku, Notion, Tailwind-css**
 <br/>
 <img src="https://live.staticflickr.com/65535/52234842798_d8d659eaa0_z.jpg" width="300" height="170" alt="preview_3" style="float: left">
 <img src="https://live.staticflickr.com/65535/52235110694_e8804f87d8_z.jpg" width="300" height="170" alt="preview_4" style="">
+
+
+### How to run: 
+    1. ```bash
+    npm run start
+    ``` -> start the web application
+    2. ```bash
+    npm run build
+    ``` -> serve the application and push to production
+   
