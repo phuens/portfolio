@@ -1,15 +1,7 @@
-import QUANTUM_NIGHT from '../asset/images/books/quantum_night.jpg';
-import JOY_X from '../asset/images/books/joy_of_x.jpg';
-import BARDO from '../asset/images/books/bardo.png';
-import ASIAN_FUTURE from '../asset/images/books/future_is_asia.jpg';
-import ON_EARTH from '../asset/images/books/on_earth.jpeg';
-import FLASH_BOYS from '../asset/images/books/flash_boys.jpeg';
-import SIDDHARTA from '../asset/images/books/siddhartha.jpeg';
-import TED_CHIANG from '../asset/images/books/stories_of_your_life.jpg';
-import HUNDRED_YEARS from '../asset/images/books/100_years_of_solitude.jpg';
-import DEBT from '../asset/images/books/debt_5000_years.jpg'
-import CHE from '../asset/images/books/che.jpg'
-import METAMORPHOSIS from '../asset/images/books/metamorphosis.jpg'
+import HOUSEKEEP from '../asset/images/books/prof_housekeeper.jpg';
+import OVERSTORY from '../asset/images/books/overstory.jpg';
+
+
 
 export const CATEGORY_COLORS = {
     _a: '#CD533B',
@@ -41,99 +33,20 @@ export const RATINGCOLORS = {
 };
 
 export const BOOKS = [
+    {
+        name: 'The Overstory',
+        author: 'Richard Powers',
+        genres: ['Fiction'],
+        status: 'Reading',
+        url: OVERSTORY,
+    }, 
+    {
+        name: 'The Housekeeper and the Professor',
+        author: 'Yōko Ogawa',
+        genres: ['Fiction', 'Mathematics'],
+        status: true,
+        rating: 4,
+        url: HOUSEKEEP,
+    },
     
-    {
-        name: 'Debt: The First 5,000 Years',
-        author: 'David Graeber',
-        genres: ['History', 'Economics'],
-        status: 'Reading',
-        url: DEBT,
-    },
-    {
-        name: 'The future is Asian ',
-        author: 'Parag Khanna',
-        genres: ['History', 'World'],
-        status: 'Reading',
-        url: ASIAN_FUTURE,
-    },
-    {
-        name: 'The Metamorphosis ',
-        author: 'Franz Kafka',
-        genres: ['Fiction'],
-        status: true,
-        rating: 4,
-        url: METAMORPHOSIS,
-    },
-    {
-        name: 'Che: The Diaries Of Ernesto Che Guevara',
-        author: 'Ernesto Che Guevara ',
-        genres: ['History', 'life'],
-        status: 'true',
-        rating: 3,
-        url: CHE,
-    },
-    {
-        name: 'One hundred Years of Solitude',
-        author: 'Gabriel Garcia Marquez',
-        genres: ['Fiction', 'MagicalRealism'],
-        status: true,
-        rating: 4,
-        url: HUNDRED_YEARS,
-    },
-    {
-        name: 'Stories of your life and others',
-        author: 'Ted Chiang',
-        genres: ['Fiction', 'Scifi'],
-        status: true,
-        rating: 5,
-        url: TED_CHIANG,
-    },
-    {
-        name: 'Siddhartha',
-        author: 'Hermann Hesse',
-        genres: ['Philosophy', 'Life', 'Fiction'],
-        status: true,
-        rating: 5,
-        url: SIDDHARTA,
-    },
-    {
-        name: 'Flash Boys: A Wall Street Revolt',
-        author: 'Michael Lewis',
-        rating: 4,
-        genres: ['Technology', 'Finance'],
-        status: true,
-        url: FLASH_BOYS,
-    },
-    {
-        name: "On Earth We're Briefly Gorgeous Novel",
-        author: 'Ocean Vuong',
-        rating: 4,
-        genres: ['Fiction'],
-        status: true,
-        url: ON_EARTH,
-    },
-    {
-        name: 'In Love With The World',
-        author: 'Yongey Mingyur Rinpoche',
-        rating: 3,
-        genres: ['Memoir', 'Spirituality'],
-        status: 'true',
-        url: BARDO,
-    },
-    {
-        name: 'Quantum Night',
-        author: 'Robert J Sawyer',
-        rating: 3,
-        genres: ['Scifi', 'Fiction'],
-        status: true,
-        url: QUANTUM_NIGHT,
-    },
-    {
-        name: 'The Joy of X',
-        author: 'Steven Strogatz',
-        rating: 3,
-        genres: ['Mathematics'],
-        status: true,
-        url: JOY_X,
-    },
 ];

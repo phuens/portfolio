@@ -52,20 +52,17 @@ const Card = ({ data }) => {
                                 </p>
                             ) : (
                                 <>
-                                    <div className="flex mt-4 mx-2  ">
-                                        {book.rating ? (
-                                            Array.from({ length: book.rating }, (_, i) => (
-                                                <span
-                                                    className="text-xl text-yellow-500"
-                                                    key={book.author + i}
-                                                >
-                                                    <HiStar />
-                                                </span>
-                                            ))
-                                        ) : (
-                                            <span>nothing</span>
-                                        )}
+                                    <div className="flex mt-4 mx-2">
+                                        {Array.from({ length: 5 }, (_, i) => (
+                                            <span
+                                                className={`text-xl ${i < book.rating ? 'text-yellow-500' : 'text-gray-500'}`}
+                                                key={book.author + i}
+                                            >
+                                                <HiStar />
+                                            </span>
+                                        ))}
                                     </div>
+
 
                                     <div className="flex text-xs flex-wrap mt-2 ml-2 text-gray-700 ">
                                         {Object.keys(book).indexOf('genres') === -1
@@ -215,13 +212,13 @@ export default function Book() {
                 </a>
             </div>
             <div className="w-12/12 hidden md:block">
-                <Year year="2023" />
+                <Year year="2024" />
                 <Card data={BOOKS} />
                 <div className='mb-60'/>
             </div>
 
             <div className="w-12/12 mx-4 block md:hidden lg:hidden">
-                <Year year="2023" />
+                <Year year="2024" />
                 <MobileCard />
                 <div className='mb-48'/>
             </div>
