@@ -15,10 +15,11 @@ Tech stacks used: **React JS, Heroku, Notion, Tailwind-css**
 
 
 ### How to run: 
-    1. ```bash
-    npm run start
-    ``` -> start the web application
-    2. ```bash
+
+1. Start the web application
+   ```bash
+   npm run start 
+2. Serve the application and push it to production
+   ```bash
     npm run build
-    ``` -> serve the application and push to production
    
