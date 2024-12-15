@@ -24,15 +24,12 @@ export default function About() {
 
                 <div className="my-4 ">
                     Phuntsho is a software developer from Bhutan with a passion to leverage and make
-                    technology serve communities. He is currently a master's student with a focus on
-                    computer vision at the{' '}
-                    <a href="https://www.usask.ca/" target="_" className="text-blue-500">
-                        University of Saskatchewan.
-                    </a>{' '}
-                    Other than coding, Phuntsho can be seen playing soccer, squash, or any sport he
-                    can find people to play with. However, you will never find him referring to
-                    himself in the third person other than here. you can reach phuntsho at
-                    <span className="text-blue-400 "> c.phuntshonorbu@gmail.com.</span>
+                    technology serve communities. He is currently a software developer at {' '}
+                    <a href="https://eda.sw.siemens.com/en-US/" target="_" className="text-blue-500">
+                     Siemens EDA
+                    </a> in Saskatoon.  
+                    Other than coding, Phuntsho can be seen playing pickleball and getting crushed by 60 year olds every day. However, you will never find him referring to
+                    himself in the third person other than here. 
                 </div>
             </div>
 

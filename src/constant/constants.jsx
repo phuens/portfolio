@@ -2,10 +2,10 @@ import { AiOutlineLinkedin, AiOutlineGithub } from 'react-icons/ai';
 
 export const NAVIGATION = [
     { text: 'About', icon: '🙋' },
-    { text: 'Pictures', icon: '🖼️' },
-    { text: 'Projects', icon: '🏗️' },
-    { text: 'Books', icon: '📚' },
-    { text: 'TIL', icon: '💡' },
+    // { text: 'Pictures', icon: '🖼️' },
+    // { text: 'Projects', icon: '🏗️' },
+    // { text: 'Books', icon: '📚' },
+    // { text: 'TIL', icon: '💡' },
 ];
 
 export const SOCIAL_MEDIA = [
@@ -23,6 +23,16 @@ export const SOCIAL_MEDIA = [
 export const ABOUT = [
     {
         year: 'Present',
+        position: 'Software Developer',
+        description: 'Computer Science',
+        url: 'https://eda.sw.siemens.com/en-US/',
+        company: 'Siemens EDA',
+        image: '../asset/images/about/watson.png',
+        country: 'Canada',
+        shortForm: 'Siemens',
+    },
+    {
+        year: '2022-2024',
         position: 'M.Sc. Student',
         description: 'Computer Science',
         url: 'https://www.cs.usask.ca/',
