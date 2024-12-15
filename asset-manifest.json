@@ -1,42 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.b3456274.css",
-    "main.js": "/static/js/main.cdcbfb23.js",
-    "static/js/787.5809834d.chunk.js": "/static/js/787.5809834d.chunk.js",
-    "static/media/canada.jpg": "/static/media/canada.10117c4558de0f94cfee.jpg",
-    "static/media/stories_of_your_life.jpg": "/static/media/stories_of_your_life.be7557641c346c8d209e.jpg",
-    "static/media/metamorphosis.jpg": "/static/media/metamorphosis.6e6eee38d4046b9188f7.jpg",
-    "static/media/loader.gif": "/static/media/loader.78330ae49f45f7281180.gif",
-    "static/media/wheaton.jpg": "/static/media/wheaton.b97bc728ea2102a4866b.jpg",
-    "static/media/misc.jpg": "/static/media/misc.3e276435d6e22b9dbb8a.jpg",
-    "static/media/siddhartha.jpeg": "/static/media/siddhartha.3be4712d123c3ee91998.jpeg",
-    "static/media/future_is_asia.jpg": "/static/media/future_is_asia.dd13aaa27afee0bc1d60.jpg",
-    "static/media/nepal.jpg": "/static/media/nepal.659987f0944d162471fd.jpg",
-    "static/media/bardo.png": "/static/media/bardo.1574bc735a814feaaf65.png",
-    "static/media/mauritius.jpg": "/static/media/mauritius.c5768220435bda9284f9.jpg",
-    "static/media/rwanda.jpg": "/static/media/rwanda.79357b448ca43259d5c9.jpg",
-    "static/media/flash_boys.jpeg": "/static/media/flash_boys.1854d97150dad1b07eae.jpeg",
-    "static/media/bhutan.jpg": "/static/media/bhutan.f2b9ea42521f9d9925cf.jpg",
-    "static/media/mongolia.jpg": "/static/media/mongolia.16c004a0690bf9069c5a.jpg",
-    "static/media/kenya.jpg": "/static/media/kenya.0ccc8a9d04e2716f23f9.jpg",
-    "static/media/zanzibar.jpg": "/static/media/zanzibar.2ef3e5155b288918292d.jpg",
-    "static/media/tanzania.jpg": "/static/media/tanzania.69f040cda2162066f9aa.jpg",
-    "static/media/on_earth.jpeg": "/static/media/on_earth.fbd2de7cfdd6413a51cc.jpeg",
-    "static/media/quantum_night.jpg": "/static/media/quantum_night.653a3e26e355d9f4fd28.jpg",
-    "static/media/joy_of_x.jpg": "/static/media/joy_of_x.7c2eaa118d787823bdb1.jpg",
+    "main.css": "/static/css/main.e49d071b.css",
+    "main.js": "/static/js/main.80f43721.js",
+    "static/js/787.0f15b36d.chunk.js": "/static/js/787.0f15b36d.chunk.js",
     "static/media/usask.png": "/static/media/usask.80ec65e35dfddb837f5d.png",
     "static/media/ttpl.png": "/static/media/ttpl.62131c99ad3d75c4db23.png",
     "static/media/watson.png": "/static/media/watson.922324ea7a28f3096884.png",
-    "static/media/debt_5000_years.jpg": "/static/media/debt_5000_years.0a7ae1d96a485341ba0a.jpg",
     "static/media/headshot.jpg": "/static/media/headshot.512b62ae16ae6e809588.jpg",
-    "static/media/100_years_of_solitude.jpg": "/static/media/100_years_of_solitude.7a1c21b2471360c2396d.jpg",
     "index.html": "/index.html",
-    "main.b3456274.css.map": "/static/css/main.b3456274.css.map",
-    "main.cdcbfb23.js.map": "/static/js/main.cdcbfb23.js.map",
-    "787.5809834d.chunk.js.map": "/static/js/787.5809834d.chunk.js.map"
+    "main.e49d071b.css.map": "/static/css/main.e49d071b.css.map",
+    "main.80f43721.js.map": "/static/js/main.80f43721.js.map",
+    "787.0f15b36d.chunk.js.map": "/static/js/787.0f15b36d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b3456274.css",
-    "static/js/main.cdcbfb23.js"
+    "static/css/main.e49d071b.css",
+    "static/js/main.80f43721.js"
   ]
 }
